@@ -89,6 +89,7 @@ const HeroBg = styled.img`
   @media screen and (max-width: 1025px) {
     object-position: 10% 75%;
   }
+  
 
   @media screen and (max-width: 775px) {
     object-position: 18% 75%;
