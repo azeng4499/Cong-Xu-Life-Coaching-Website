@@ -1,0 +1,318 @@
+import React, { useState, useEffect } from "react";
+import styled from "styled-components";
+import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
+import Guy from "../images/guy.jpg";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { Colors } from "../utils/colors";
+
+const Testimony = () => {
+  const [people, setPeople] = useState({
+    person1: false,
+    person2: true,
+    person3: false,
+  });
+  useEffect(() => {
+    Aos.init({ duration: 1500 });
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (people["person1"]) {
+        changePerson("person2");
+      } else if (people["person2"]) {
+        changePerson("person3");
+      } else {
+        changePerson("person1");
+      }
+    }, 5000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [people]);
+
+  const changePerson = (person) => {
+    if (person === "person1") {
+      setPeople({ person1: true, person2: false, person3: false });
+    } else if (person === "person2") {
+      setPeople({ person1: false, person2: true, person3: false });
+    } else {
+      setPeople({ person1: false, person2: false, person3: true });
+    }
+  };
+
+  return (
+    <>
+      <svg
+        height="80px"
+        width="100%"
+        viewBox="0 0 100 100"
+        preserveAspectRatio="none"
+        fill={Colors["tan"]}
+        style={{ background: Colors["blue"], display: "block" }}
+      >
+        <path d="M0 0 L100 0 L100 100 Z" />
+      </svg>
+      <Page>
+        <TestimonyWrapper>
+          <TitleWrapper
+            data-aos="fade-up"
+            data-aos-once="true"
+            className="testimony"
+          >
+            <Header>Testimonies</Header>
+            <Title>What People Are Saying</Title>
+          </TitleWrapper>
+          <TestimonyContainer data-aos="fade-up" data-aos-once="true">
+            <div style={{ display: "flex" }}>
+              <RiDoubleQuotesL
+                size={"2em"}
+                style={{ color: Colors["white"] }}
+              />
+              <TestimonyText>
+                {people.person1 ? (
+                  <div>
+                    She is a consummate REAL professional (on time, embodies her
+                    work, delivers, inspires, transforms). Laura has ‘staying
+                    power - stickiness’.
+                  </div>
+                ) : people.person2 ? (
+                  <div>
+                    <div>
+                      In a highly engaging session at GE Healthcare, she
+                      delivered simple, yet highly impactful life lessons to the
+                      employees. The audience walked away with tangible actions
+                      on how to live a limitless life.
+                    </div>
+                  </div>
+                ) : (
+                  <div>
+                    <div>
+                      As far as her presentation, Laura spent the extra time to
+                      understand our audience and she incorporated those
+                      learnings into her presentation, which made a huge
+                      difference.
+                    </div>
+                  </div>
+                )}
+              </TestimonyText>
+              <RiDoubleQuotesR
+                size={"2em"}
+                style={{
+                  justifySelf: "end",
+                  alignSelf: "end",
+                  color: Colors["white"],
+                }}
+              />
+            </div>
+          </TestimonyContainer>
+          <TestimonyToolbar data-aos="fade-up" data-aos-once="true">
+            <TestimonyPersonContainer>
+              <TestimonyPerson
+                src={Guy}
+                highlighted={people.person1}
+                onClick={() => {
+                  changePerson("person1");
+                }}
+              />
+              <TestimonyPersonLabel>Whitney Watson</TestimonyPersonLabel>
+            </TestimonyPersonContainer>
+            <TestimonyPersonContainer>
+              <TestimonyPerson
+                src={Guy}
+                highlighted={people.person2}
+                onClick={() => {
+                  changePerson("person2");
+                }}
+              />
+              <TestimonyPersonLabel>Gerard Hamilton</TestimonyPersonLabel>
+            </TestimonyPersonContainer>
+            <TestimonyPersonContainer>
+              <TestimonyPerson
+                src={Guy}
+                highlighted={people.person3}
+                onClick={() => {
+                  changePerson("person3");
+                }}
+              />
+              <TestimonyPersonLabel>Johnny Phelps</TestimonyPersonLabel>
+            </TestimonyPersonContainer>
+          </TestimonyToolbar>
+        </TestimonyWrapper>
+      </Page>
+    </>
+  );
+};
+
+export default Testimony;
+
+const TitleWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  align-self: flex-end;
+
+  @media screen and (max-width: 775px) {
+    align-self: center;
+    align-items: center;
+  }
+`;
+
+const TestimonyWrapper = styled.div`
+  height: 550px;
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: 1300px) {
+    width: 600px;
+  }
+`;
+
+const Title = styled.div`
+  color: ${Colors["orange"]};
+  font-family: "Bebas Neue", cursive;
+  font-size: 4rem;
+  margin: 0px 0px 50px 0px;
+  border-bottom: solid;
+  border-width: 3px;
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 550px) {
+    font-size: 2.6rem;
+  }
+
+  @media screen and (max-width: 375px) {
+    font-size: 2.3rem;
+  }
+`;
+
+const TestimonyText = styled.div`
+  font-family: "Kdam Thmor Pro", sans-serif;
+  font-size: 1.8rem;
+  max-width: 1000px;
+  color: ${Colors["white"]};
+  text-align: center;
+
+  @media screen and (max-width: 1300px) {
+    max-width: 400px;
+  }
+
+  @media screen and (max-width: 775px) {
+    max-width: 300px;
+    font-size: 1rem;
+  }
+
+  @media screen and (max-width: 775px) {
+    max-width: 200px;
+  }
+`;
+
+const TestimonyContainer = styled.div`
+  height: 250px;
+  width: 1200px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid;
+  border-radius: 40px;
+  border-width: 4px;
+  border-color: white;
+  background: ${Colors["darkBlue"]};
+  @media screen and (max-width: 1300px) {
+    width: 600px;
+    height: 400px;
+  }
+
+  @media screen and (max-width: 775px) {
+    width: 400px;
+    height: 550px;
+  }
+
+  @media screen and (max-width: 550px) {
+    width: 325px;
+    height: 750px;
+  }
+
+  @media screen and (max-width: 375px) {
+    width: 300px;
+    height: 750px;
+  }
+`;
+
+const TestimonyToolbar = styled.div`
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const TestimonyPersonContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 50px;
+
+  @media screen and (max-width: 775px) {
+    margin: 0px 20px;
+  }
+  @media screen and (max-width: 375px) {
+    margin: 0px 5px;
+  }
+`;
+
+const TestimonyPerson = styled.img`
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  object-position: 60% 75%;
+  border: solid 5px;
+  border-color: ${({ highlighted }) =>
+    highlighted ? Colors["darkBlue"] : Colors["white"]};
+
+  @media screen and (max-width: 550px) {
+    height: 80px;
+    width: 80px;
+  }
+`;
+
+const TestimonyPersonLabel = styled.div`
+  font-family: "Kdam Thmor Pro", sans-serif;
+  font-size: 1rem;
+  margin-top: 10px;
+  text-align: center;
+  color: ${Colors["white"]}}
+
+  @media screen and (max-width: 550px) {
+    font-size: 0.8rem;
+  }
+`;
+
+const Header = styled.div`
+  color: ${Colors["white"]};
+  font-family: "Kdam Thmor Pro", sans-serif;
+  font-size: 1.2rem;
+`;
+
+const Page = styled.div`
+  background: ${Colors["blue"]};
+  height: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: 1300px) {
+    height: 800px;
+  }
+
+  @media screen and (max-width: 775px) {
+    height: 650px;
+  }
+`;
