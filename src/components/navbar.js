@@ -104,7 +104,7 @@ const Navbar = () => {
           <ButtonText> {Translate("Book Now")}</ButtonText>
         </Button>
         <PopupModal
-          url="https://calendly.com/amycxu/discovery-call"
+          url="https://calendly.com/cx-coaching/meetingcong"
           rootElement={document.getElementById("root")}
           text="Click here to schedule!"
           pageSettings={{

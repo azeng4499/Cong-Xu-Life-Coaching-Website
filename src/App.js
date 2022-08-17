@@ -8,7 +8,6 @@ import AboutCoaching from "./components/about-coaching";
 import Footer from "./components/footer";
 import Sidebar from "./components/sidebar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import BookNow from "./components/book-now";
 import "./App.css";
 
 function App() {
@@ -27,7 +26,6 @@ function App() {
                 <AboutCoaching />
                 <TypesOfCoaching />
                 <Testimony />
-                <BookNow />
                 <Footer />
               </>
             }
