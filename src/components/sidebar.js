@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Link as LinkS } from "react-scroll";
 import { FaTimes } from "react-icons/fa";
 import { Colors } from "../utils/colors";
 import { useDispatch, useSelector } from "react-redux";
 import { setNavOpen } from "../store/actions";
+import { PopupModal } from "react-calendly";
 
 const Sidebar = () => {
   const dispatch = useDispatch();
   const navOpen = useSelector((state) => state.navOpen);
+
+  const [calendlyOpen, setCalendlyOpen] = useState(false);
 
   return (
     <SidebarContainer isOpen={navOpen}>
@@ -45,11 +48,23 @@ const Sidebar = () => {
           Testimonies
         </SidebarLink>
         <SideBtnWrap>
-          <Button>
+          <Button onClick={() => setCalendlyOpen(true)}>
             <ButtonText>Book Now</ButtonText>
           </Button>
         </SideBtnWrap>
       </SidebarMenu>
+      <PopupModal
+        url="https://calendly.com/cx-coaching/meetingcong"
+        rootElement={document.getElementById("root")}
+        text="Click here to schedule!"
+        pageSettings={{
+          backgroundColor: "253659",
+          primaryColor: "fff",
+          textColor: "fff",
+        }}
+        onModalClose={() => setCalendlyOpen(false)}
+        open={calendlyOpen}
+      />
     </SidebarContainer>
   );
 };
@@ -61,7 +76,7 @@ export const SidebarContainer = styled.aside`
   z-index: 999;
   width: 100vw;
   height: 100vh;
-  background: ${Colors["darkBlue"]};
+  background: ${Colors.darkBlue};
   display: grid;
   align-items: center;
   justify-content: center;
@@ -92,12 +107,12 @@ export const SidebarLink = styled(LinkS)`
   list-style: none;
   transition: 0.2s ease-in-out;
   text-decoration: none;
-  color: ${Colors["white"]};
+  color: ${Colors.white};
   cursor: pointer;
   font-family: "Kdam Thmor Pro", sans-serif;
 
   &:hover {
-    color: ${Colors["tan"]}
+    color: ${Colors.tan}
     transition: 0.2 ease-in-out;
   }
 `;
@@ -113,19 +128,19 @@ export const Icon = styled.div`
 `;
 
 const Button = styled.button`
-  background: ${Colors["orange"]};
+  background: ${Colors.orange};
   height: 3rem;
   width: 8rem;
   border-radius: 30px;
   border: solid;
-  border-color: ${Colors["white"]};
+  border-color: ${Colors.white};
   border-width: 3px;
 `;
 
 const ButtonText = styled.div`
   font-size: 1.2rem;
   font-family: "Kdam Thmor Pro", sans-serif;
-  color: ${Colors["white"]};
+  color: ${Colors.white};
 `;
 
 export const SideBtnWrap = styled.div`

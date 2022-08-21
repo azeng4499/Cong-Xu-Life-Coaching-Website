@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -7,29 +7,96 @@ import Business from "../images/business-final.svg";
 import Personal from "../images/personal-final.svg";
 import Relationship from "../images/relationship-final.svg";
 import { Colors } from "../utils/colors";
+import Modal from "react-modal";
+import { FaReadme } from "react-icons/fa";
 
 const TypesOfCoaching = () => {
   useEffect(() => {
     Aos.init({ duration: 1500 });
   }, []);
 
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalOption, setModalOption] = useState("relationship");
+
+  const ModalHeaderText = styled.div`
+    color: ${({ type }) =>
+      type === modalOption ? Colors.orange : Colors.white};
+    font-family: "Bebas Neue", cursive;
+    cursor: pointer;
+  `;
+
+  const getTypeDescription = () => {
+    switch (modalOption) {
+      case "relationship":
+        return "This is the relationship description";
+      case "personal":
+        return "This is the personal description";
+      case "career":
+        return "This is the career description";
+      case "business":
+        return "This is the business description";
+      default:
+        return null;
+    }
+  };
+
   return (
     <>
+      <CustomModal isOpen={modalOpen}>
+        <ModalContainer>
+          <ModalHeader>
+            <ModalHeaderText
+              onClick={() => setModalOption("relationship")}
+              type={"relationship"}
+            >
+              Relationship
+            </ModalHeaderText>
+            <ModalHeaderText
+              onClick={() => setModalOption("personal")}
+              type={"personal"}
+            >
+              Personal
+            </ModalHeaderText>
+            <ModalHeaderText
+              onClick={() => setModalOption("career")}
+              type={"career"}
+            >
+              Career
+            </ModalHeaderText>
+            <ModalHeaderText
+              onClick={() => setModalOption("business")}
+              type={"business"}
+            >
+              Business
+            </ModalHeaderText>
+          </ModalHeader>
+          <ModalBody>{getTypeDescription()}</ModalBody>
+          <ModalHeader>
+            <CloseButton onClick={() => setModalOpen(false)}>Close</CloseButton>
+          </ModalHeader>
+        </ModalContainer>
+      </CustomModal>
       <svg
         height="80px"
         width="100%"
         viewBox="0 0 100 100"
         preserveAspectRatio="none"
-        fill={Colors["blue"]}
-        style={{ background: Colors["tan"], display: "block" }}
+        fill={Colors.blue}
+        style={{ background: Colors.tan, display: "block" }}
       >
         <path d="M0 0 L100 0 L100 100 Z" />
       </svg>
       <Page className="types-of-coaching">
         <PageWrapper>
           <HeaderWrapper data-aos="fade-up" data-aos-once="true">
-            <Header>Types of Coaching</Header>
-            <Title>How I Can Help</Title>
+            <div>
+              <Header>Types of Coaching</Header>
+              <Title>How I Can Help</Title>
+            </div>
+            <ReadMore onClick={() => setModalOpen(true)}>
+              <FaReadme />
+              Read more about each type
+            </ReadMore>
           </HeaderWrapper>
           <BlobWrapper>
             <BlobContainer data-aos="fade-up" data-aos-once="true">
@@ -43,7 +110,7 @@ const TypesOfCoaching = () => {
                 height="155px"
                 style={{
                   transform: "scale(3.3) translate(0px, 15px)",
-                  fill: Colors["darkBlue"],
+                  fill: Colors.darkBlue,
                   overflow: "hidden",
                 }}
               >
@@ -54,7 +121,7 @@ const TypesOfCoaching = () => {
                   ></path>
                 </g>
               </svg>
-              <Content>
+              <Content onClick={() => console.log("clicked")}>
                 <BlobImage src={Relationship} />
                 <Label style={{ padding: "10px 20px" }}>Relationship</Label>
               </Content>
@@ -70,7 +137,7 @@ const TypesOfCoaching = () => {
                 height="155px"
                 style={{
                   transform: "scale(3.2) translate(-10px, 3px)",
-                  fill: Colors["darkBlue"],
+                  fill: Colors.darkBlue,
                 }}
               >
                 <g transform="translate(174.07010650634766, -2.4157562255859375)">
@@ -98,7 +165,7 @@ const TypesOfCoaching = () => {
                 height="155px"
                 style={{
                   transform: "scale(3.5) translate(-14px, 15px)",
-                  fill: Colors["darkBlue"],
+                  fill: Colors.darkBlue,
                 }}
               >
                 <g transform="translate(174.07010650634766, -2.4157562255859375)">
@@ -126,7 +193,7 @@ const TypesOfCoaching = () => {
                 height="155px"
                 style={{
                   transform: "scale(3) translate(-12px, 10px)",
-                  fill: Colors["darkBlue"],
+                  fill: Colors.darkBlue,
                 }}
               >
                 <g transform="translate(174.07010650634766, -2.4157562255859375)">
@@ -159,11 +226,65 @@ const PageWrapper = styled.div`
 
 const HeaderWrapper = styled.div`
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   @media screen and (max-width: 775px) {
     justify-content: center;
     align-items: center;
+    flex-direction: column;
   }
+`;
+
+const ModalHeader = styled.div`
+  width: 100%;
+  height: 60px;
+  background: ${Colors.darkBlue};
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+`;
+
+const ModalBody = styled.div`
+  width: 100%;
+  height: 100%;
+  background: ${Colors.tan};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const ReadMore = styled.div`
+  margin-bottom: 40px;
+  color: ${Colors.orange};
+  text-decoration: underline;
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+`;
+
+const CustomModal = styled(Modal)`
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
+
+const CloseButton = styled.div`
+  color: ${Colors.white};
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.5rem;
+  cursor: pointer;
+`;
+
+const ModalContainer = styled.div`
+  height: calc(100vh - 300px);
+  width: calc(100vw - 50px);
+  background: red;
 `;
 
 const BlobContainer = styled.div`
@@ -198,7 +319,7 @@ const Content = styled.div`
 const Label = styled.div`
   font-family: "Kdam Thmor Pro", sans-serif;
   font-size: 2.2rem;
-  color: ${Colors["white"]};
+  color: ${Colors.white};
   width: fit-content;
   display: flex;
   justify-content: center;
@@ -225,7 +346,7 @@ const BlobWrapper = styled.div`
 `;
 
 const Header = styled.div`
-  color: ${Colors["darkBlue"]};
+  color: ${Colors.darkBlue};
   font-family: "Kdam Thmor Pro", sans-serif;
   font-size: 1.2rem;
 `;
@@ -233,7 +354,7 @@ const Header = styled.div`
 const Title = styled.div`
   height: fit-content;
   width: fit-content;
-  color: ${Colors["orange"]};
+  color: ${Colors.orange};
   font-family: "Bebas Neue", cursive;
   font-size: 4rem;
   margin: 0px 0px 75px 0px;
@@ -242,6 +363,10 @@ const Title = styled.div`
   border-bottom: solid;
   border-width: 3px;
 
+  @media screen and (max-width: 775px) {
+    margin: 0px 0px 40px 0px;
+  }
+
   @media screen and (max-width: 375px) {
     font-size: 3.5rem;
   }
@@ -249,7 +374,7 @@ const Title = styled.div`
 
 const Page = styled.div`
   height: 650px;
-  background: ${Colors["tan"]};
+  background: ${Colors.tan};
   display: flex;
   flex-direction: column;
   justify-content: center;

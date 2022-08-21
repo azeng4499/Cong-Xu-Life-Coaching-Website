@@ -46,7 +46,7 @@ const Navbar = () => {
         <MenuIcon>
           <FaBars
             size={"1.5em"}
-            color={Colors["white"]}
+            color={Colors.white}
             onClick={() => dispatch(setNavOpen(!navOpen))}
           />
         </MenuIcon>
@@ -135,14 +135,14 @@ const NavContainer = styled.div`
 
   //445979
   //7557F0
-  background: ${Colors["darkBlue"]};
+  background: ${Colors.darkBlue};
   display: flex;
   justify-content: space-between;
   align-items: center;
 `;
 
 const LogoImg = styled.img`
-  height: 55px;
+  height: 65px;
   width: 300px;
   object-fit: cover;
 
@@ -163,7 +163,7 @@ const Header = styled.div`
 
 const HeaderText = styled.div`
   font-size: 1rem;
-  color: ${Colors["white"]};
+  color: ${Colors.white};
   font-family: "Kdam Thmor Pro", sans-serif;
   margin: 0 8px;
   display: flex;
@@ -187,7 +187,7 @@ const NavMenu = styled.ul`
 `;
 
 const NavLinks = styled(LinkS)`
-  color: ${Colors["white"]};
+  color: ${Colors.white};
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -198,7 +198,7 @@ const NavLinks = styled(LinkS)`
   font-family: "Anek Malayalam", sans-serif;
 
   &.active {
-    color: ${Colors["tan"]};
+    color: ${Colors.tan};
     font-weight: bold;
   }
 `;
@@ -206,12 +206,12 @@ const NavLinks = styled(LinkS)`
 const Button = styled.button`
   //d1ae95
   //F05786
-  background: ${Colors["orange"]};
+  background: ${Colors.orange};
   height: 3rem;
   width: 8rem;
   border-radius: 30px;
   border: solid;
-  border-color: ${Colors["white"]};
+  border-color: ${Colors.white};
   border-width: 3px;
 
   @media screen and (max-width: 1300px) {
@@ -222,7 +222,7 @@ const Button = styled.button`
 const ButtonText = styled.div`
   font-size: 1.2rem;
   font-family: "Kdam Thmor Pro", sans-serif;
-  color: ${Colors["white"]};
+  color: ${Colors.white};
 `;
 
 const MenuIcon = styled.div`

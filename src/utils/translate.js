@@ -8,6 +8,10 @@ const dictionary = {
   "Types of Coaching": "辅导类型",
   Testimonies: "见证",
   "Book Now": "报名",
+  "DREAM.": "梦.",
+  "CONQUER.": "征服.",
+  "EXCEL.": "擅长.",
+  "Break": "挣脱."
 };
 
 export const Translate = (string) => {

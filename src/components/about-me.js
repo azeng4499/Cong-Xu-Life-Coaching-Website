@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import PortraitImg from "../images/headshot-new Cropped.jpg";
+import PortraitImg from "../images/portrait.jpg";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { Translate } from "../utils/translate";
@@ -28,23 +28,26 @@ const AboutMe = () => {
         <IntroWrapper data-aos="fade-up" data-aos-once="true">
           <IntroContainer>
             <IntroText>
-              <span style={{ fontSize: "2em", color: Colors["black"] }}>
-                <span style={{ color: Colors["orange"] }}>
+              <span style={{ fontSize: "2em", color: Colors.black }}>
+                <span style={{ color: Colors.orange }}>
                   {Translate("Hello!")}
                 </span>{" "}
                 {Translate("My name is Cong")}
               </span>{" "}
-              and I enjoy creating things that live on the internet. My interest
-              in web development started back in 2012 when I decided to try
-              editing custom Tumblr themes — turns out hacking together a custom
-              reblog button taught me a lot about HTML & CSS! Fast-forward to
-              today, and I’ve had the privilege of working at an advertising
-              agency, a start-up, a huge corporation, and a student-led design
-              studio. My main focus these days is building accessible, inclusive
-              products and digital experiences at Upstatement for a variety of
-              clients. I also recently launched a course that covers everything
-              you need to build a web app with the Spotify API using Node &
-              React. Here are a few technologies I’ve been.
+              I am an immigrant from Qingdao, China, a beautiful city I love. It
+              has a rich history, including once being a colony of Germany and
+              now the home of the famous Tsingtao beer. I came to the US as a
+              graduate student to study Educational Psychology. Upon graduating,
+              I became an elementary school teacher, but I was unhappy with that
+              job. After struggling and talking to many people, I thought I
+              would be happier with a business degree. I went back to school to
+              get a master’s in accounting and followed the typical career path
+              to work in corporate America, yet, I was still not happy. Finally, I 
+              talked to a life coach to learn more about myself. I
+              discovered that I enjoyed the process and decided I wanted to be a
+              life coach too! After graduating from the ICF coaching program, I have
+              begun to coach other people. Working as a coach, I can finally
+              enjoy my work and be the person I want to be.
             </IntroText>
           </IntroContainer>
           <PictureContainer data-aos="fade-up" data-aos-once="true">
@@ -102,7 +105,7 @@ const IntroWrapper = styled.div`
 const Title = styled.div`
   width: fit-content;
   height: fit-content;
-  color: ${Colors["orange"]};
+  color: ${Colors.orange};
   font-family: "Bebas Neue", cursive;
   font-size: 4rem;
   margin: 0px 0px 50px 0px;
@@ -121,7 +124,7 @@ const Title = styled.div`
 `;
 
 const Header = styled.div`
-  color: ${Colors["darkBlue"]};
+  color: ${Colors.darkBlue};
   font-family: "Kdam Thmor Pro", sans-serif;
   font-size: 1.2rem;
 `;
@@ -154,17 +157,17 @@ const IntroContainer = styled.div`
 `;
 
 const IntroText = styled.div`
-  color: ${Colors["darkBlue"]};
+  color: ${Colors.darkBlue};
   font-family: "Kdam Thmor Pro", sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   // text-align: center;
 
   @media screen and (max-width: 415px) {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   @media screen and (max-width: 375px) {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 `;
 
@@ -176,6 +179,7 @@ const Portrait = styled.img`
   border: solid;
   border-width: 3px;
   border-color: white;
+  filter: grayscale(100);
 
   @media screen and (max-width: 375px) {
     height: 275px;
@@ -183,7 +187,7 @@ const Portrait = styled.img`
   }
 
   &:hover {
-    filter: grayscale(100);
+    filter: grayscale(0);
   }
 `;
 
@@ -203,7 +207,7 @@ const PortraitBorder = styled.div`
 `;
 
 const Page = styled.div`
-  background: ${Colors["tan"]};
+  background: ${Colors.tan};
   height: 600px;
   display: flex;
   justify-content: center;

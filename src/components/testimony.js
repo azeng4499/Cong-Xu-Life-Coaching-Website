@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
-import Guy from "../images/guy.jpg";
+import Testimony1 from "../images/guy.jpg";
+import Testimony2 from "../images/guy.jpg";
+import Testimony3 from "../images/guy.jpg";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { Colors } from "../utils/colors";
@@ -49,8 +51,8 @@ const Testimony = () => {
         width="100%"
         viewBox="0 0 100 100"
         preserveAspectRatio="none"
-        fill={Colors["tan"]}
-        style={{ background: Colors["blue"], display: "block" }}
+        fill={Colors.tan}
+        style={{ background: Colors.blue, display: "block" }}
       >
         <path d="M0 0 L100 0 L100 100 Z" />
       </svg>
@@ -66,10 +68,7 @@ const Testimony = () => {
           </TitleWrapper>
           <TestimonyContainer data-aos="fade-up" data-aos-once="true">
             <div style={{ display: "flex" }}>
-              <RiDoubleQuotesL
-                size={"2em"}
-                style={{ color: Colors["white"] }}
-              />
+              <RiDoubleQuotesL size={"2em"} style={{ color: Colors.white }} />
               <TestimonyText>
                 {people.person1 ? (
                   <div>
@@ -102,7 +101,7 @@ const Testimony = () => {
                 style={{
                   justifySelf: "end",
                   alignSelf: "end",
-                  color: Colors["white"],
+                  color: Colors.white,
                 }}
               />
             </div>
@@ -110,7 +109,7 @@ const Testimony = () => {
           <TestimonyToolbar data-aos="fade-up" data-aos-once="true">
             <TestimonyPersonContainer>
               <TestimonyPerson
-                src={Guy}
+                src={Testimony1}
                 highlighted={people.person1}
                 onClick={() => {
                   changePerson("person1");
@@ -120,7 +119,7 @@ const Testimony = () => {
             </TestimonyPersonContainer>
             <TestimonyPersonContainer>
               <TestimonyPerson
-                src={Guy}
+                src={Testimony2}
                 highlighted={people.person2}
                 onClick={() => {
                   changePerson("person2");
@@ -130,7 +129,7 @@ const Testimony = () => {
             </TestimonyPersonContainer>
             <TestimonyPersonContainer>
               <TestimonyPerson
-                src={Guy}
+                src={Testimony3}
                 highlighted={people.person3}
                 onClick={() => {
                   changePerson("person3");
@@ -173,7 +172,7 @@ const TestimonyWrapper = styled.div`
 `;
 
 const Title = styled.div`
-  color: ${Colors["orange"]};
+  color: ${Colors.orange};
   font-family: "Bebas Neue", cursive;
   font-size: 4rem;
   margin: 0px 0px 50px 0px;
@@ -195,7 +194,7 @@ const TestimonyText = styled.div`
   font-family: "Kdam Thmor Pro", sans-serif;
   font-size: 1.8rem;
   max-width: 1000px;
-  color: ${Colors["white"]};
+  color: ${Colors.white};
   text-align: center;
 
   @media screen and (max-width: 1300px) {
@@ -223,7 +222,7 @@ const TestimonyContainer = styled.div`
   border-radius: 40px;
   border-width: 4px;
   border-color: white;
-  background: ${Colors["darkBlue"]};
+  background: ${Colors.darkBlue};
   @media screen and (max-width: 1300px) {
     width: 600px;
     height: 400px;
@@ -275,7 +274,7 @@ const TestimonyPerson = styled.img`
   object-position: 60% 75%;
   border: solid 5px;
   border-color: ${({ highlighted }) =>
-    highlighted ? Colors["darkBlue"] : Colors["white"]};
+    highlighted ? Colors.orange : Colors.white};
 
   @media screen and (max-width: 550px) {
     height: 80px;
@@ -288,7 +287,7 @@ const TestimonyPersonLabel = styled.div`
   font-size: 1rem;
   margin-top: 10px;
   text-align: center;
-  color: ${Colors["white"]}}
+  color: ${Colors.white}}
 
   @media screen and (max-width: 550px) {
     font-size: 0.8rem;
@@ -296,13 +295,13 @@ const TestimonyPersonLabel = styled.div`
 `;
 
 const Header = styled.div`
-  color: ${Colors["white"]};
+  color: ${Colors.white};
   font-family: "Kdam Thmor Pro", sans-serif;
   font-size: 1.2rem;
 `;
 
 const Page = styled.div`
-  background: ${Colors["blue"]};
+  background: ${Colors.blue};
   height: 650px;
   display: flex;
   justify-content: center;

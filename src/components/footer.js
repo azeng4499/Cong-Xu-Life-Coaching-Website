@@ -26,7 +26,7 @@ export default Footer;
 
 const FooterContainer = styled.div`
   height: 100px;
-  background: ${Colors["darkBlue"]};
+  background: ${Colors.darkBlue};
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -41,7 +41,7 @@ const FooterContainer = styled.div`
 
 const FooterText = styled.div`
   font-size: 1rem;
-  color: ${Colors["white"]};
+  color: ${Colors.white};
   font-family: "Kdam Thmor Pro", sans-serif;
   display: flex;
   align-items: center;

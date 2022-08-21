@@ -4,6 +4,7 @@ import Bg from "../images/congxuwebsitebackground.png";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { Colors } from "../utils/colors";
+import { Translate } from "../utils/translate";
 
 const Hero = () => {
   useEffect(() => {
@@ -15,11 +16,11 @@ const Hero = () => {
       <HeroBg src={Bg} />
       <HeroGroup>
         <HeroTextGroup>
-          <HeroH1 data-aos="fade">DREAM.</HeroH1>
-          <HeroH1 data-aos="fade">CONQUER.</HeroH1>
-          <HeroH1 data-aos="fade">EXCEL.</HeroH1>
+          <HeroH1 data-aos="fade">{Translate("DREAM.")}</HeroH1>
+          <HeroH1 data-aos="fade">{Translate("CONQUER.")}</HeroH1>
+          <HeroH1 data-aos="fade">{Translate("EXCEL.")}</HeroH1>
           <HeroH2 data-aos="fade">
-            <HighlightedWord>Break</HighlightedWord> Free.
+            <HighlightedWord>{Translate("Break")}</HighlightedWord>{" "}{Translate("Free.")}
           </HeroH2>
           <SignatureSvg
             width="289"
@@ -39,7 +40,7 @@ const Hero = () => {
 export default Hero;
 
 const HighlightedWord = styled.span`
-  color: ${Colors["orange"]};
+  color: ${Colors.orange};
 `;
 
 const SignatureSvg = styled.svg`
@@ -61,7 +62,7 @@ const dash = keyframes`
 const SvgPath = styled.path`
   stroke-dasharray: 1900;
   stroke-dashoffset: 2100;
-  stroke: ${Colors["white"]};
+  stroke: ${Colors.white};
   stroke-width: 4;
   animation: ${dash} 5s linear forwards;
 `;
@@ -89,7 +90,6 @@ const HeroBg = styled.img`
   @media screen and (max-width: 1025px) {
     object-position: 10% 75%;
   }
-  
 
   @media screen and (max-width: 775px) {
     object-position: 18% 75%;
@@ -128,17 +128,17 @@ const HeroTextGroup = styled.div`
 `;
 
 const HeroH1 = styled.div`
-  color: ${Colors["white"]};
+  color: ${Colors.white};
   font-family: "Kdam Thmor Pro", sans-serif;
   font-size: 2.5rem;
-  z-index: 1;
+  // z-index: 1;
   // height: fit-content;
   // background: yellow;
   margin-top: -10px;
 
   @media screen and (max-width: 1300px) {
     font-size: 2rem;
-    color: ${Colors["white"]};
+    color: ${Colors.white};
   }
   @media screen and (max-width: 450px) {
     font-size: 1.5rem;
@@ -151,17 +151,17 @@ const HeroH1 = styled.div`
 `;
 
 const HeroH2 = styled.div`
-  color: ${Colors["white"]};
+  color: ${Colors.white};
   font-family: "Kdam Thmor Pro", sans-serif;
   font-size: 6rem;
-  z-index: 1;
+  // z-index: 1;
   positon: absolute;
   margin: -20px 0px 0px -5px;
   // background: red;
 
   @media screen and (max-width: 1300px) {
     font-size: 5rem;
-    color: ${Colors["white"]};
+    color: ${Colors.white};
   }
   @media screen and (max-width: 450px) {
     font-size: 4rem;

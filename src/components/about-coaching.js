@@ -1,10 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import "./about-coaching.css";
-import Cafe from "../images/cafe.jpg";
-import Crowd from "../images/crowd.jpg";
-import CrossWalk from "../images/crosswalk.jpg";
-import Family from "../images/family.jpg";
 import { Colors } from "../utils/colors";
 const AboutCoaching = () => {
   return (
@@ -14,8 +10,8 @@ const AboutCoaching = () => {
         width="100%"
         viewBox="0 0 100 100"
         preserveAspectRatio="none"
-        fill={Colors["tan"]}
-        style={{ background: Colors["blue"], display: "block" }}
+        fill={Colors.tan}
+        style={{ background: Colors.blue, display: "block" }}
       >
         <path d="M0 0 L100 0 L100 100 Z" />
       </svg>
@@ -38,64 +34,79 @@ const AboutCoaching = () => {
             </div>
           </TitleWrapper>
           <CoachingWrapper>
-            <div style={{ display: "grid" }}>
-              <div className="flip-card">
-                <div className="flip-card-inner">
-                  <div className="flip-card-front">
-                    <CardImg src={Crowd} />
-                    <QuestionText>What Is Coaching?</QuestionText>
-                  </div>
-                  <div className="flip-card-back">
-                    <AnswerText>
-                      Coaching is partnering with clients in a thought-provoking
-                      and creative process that inspires them to maximize their
-                      personal and professional potential. The process of
-                      coaching often unlocks previously untapped sources of
-                      imagination, productivity and leadership. Coaching is all
-                      about identifying and closing the gap between where you
-                      currently are and where you want to be. I act as a mirror
-                      reflecting patterns of thinking, doing, and being that are
-                      keeping you stuck or holding you back from stepping into
-                      this future place.⁠
-                    </AnswerText>
-                  </div>
-                </div>
-              </div>
-              <div className="flip-card">
-                <div className="flip-card-inner">
-                  <div className="flip-card-front">
-                    <CardImg src={Cafe} />
-                    <QuestionText>Question 3</QuestionText>
-                  </div>
-                  <div className="flip-card-back">
-                    <Text>Answer 3</Text>
-                  </div>
-                </div>
-              </div>
+            <div className="card">
+              <QuestionText>What is coaching?</QuestionText>
+              <AnswerText>
+                Coaching is about to connect to your human energy. To
+                identifying and closing the gap between where you are right now
+                and where you want to be in the future.  Coach act as a mirror
+                to reflect and what you really want, what is the blind spot that
+                hold you back and take the new action to achieve it.
+              </AnswerText>
             </div>
-            <div style={{ display: "grid" }}>
-              <div className="flip-card">
-                <div className="flip-card-inner">
-                  <div className="flip-card-front">
-                    <CardImg src={CrossWalk} />
-                    <Text>Question 2</Text>
-                  </div>
-                  <div className="flip-card-back">
-                    <Text>Answer 2</Text>
-                  </div>
-                </div>
-              </div>
-              <div className="flip-card">
-                <div className="flip-card-inner">
-                  <div className="flip-card-front">
-                    <CardImg src={Family} />
-                    <Text>Question 4</Text>
-                  </div>
-                  <div className="flip-card-back">
-                    <Text>Answer 4</Text>
-                  </div>
-                </div>
-              </div>
+            <div className="card">
+              <QuestionText>Coach vs Therapist</QuestionText>
+              <Table>
+                <tr>
+                  <th style={{ border: "solid", padding: "1px 10px" }}>
+                    Coach
+                  </th>
+                  <th style={{ border: "solid", padding: "1px 10px" }}>
+                    Therapist
+                  </th>
+                </tr>
+                <tr>
+                  <TableCell>Focuses on the past</TableCell>
+                  <TableCell>Focuses on the future</TableCell>
+                </tr>
+                <tr>
+                  <TableCell>Asks about the problem</TableCell>
+                  <TableCell>Asks about the possibility</TableCell>
+                </tr>
+                <tr>
+                  <TableCell>Clinical & Diagnostic</TableCell>
+                  <TableCell>Not Clinical & Diagonstic</TableCell>
+                </tr>
+              </Table>
+            </div>
+            <div className="card">
+              <QuestionText>Coach vs Consultant</QuestionText>
+              <Table>
+                <tr>
+                  <th style={{ border: "solid", padding: "1px 10px" }}>
+                    Coach
+                  </th>
+                  <th style={{ border: "solid", padding: "1px 10px" }}>
+                    Consultant
+                  </th>
+                </tr>
+                <tr>
+                  <TableCell>Will provide suggestions</TableCell>
+                  <TableCell>
+                    Won’t provide suggestions, believe clients know the answer.
+                  </TableCell>
+                </tr>
+                <tr>
+                  <TableCell>Focuses on “How” to get there.</TableCell>
+                  <TableCell>
+                    Focuses on “What” before the “How”, gain the power from the
+                    vision.
+                  </TableCell>
+                </tr>
+              </Table>
+            </div>
+            <div className="card">
+              <QuestionText>What will coaching bring?</QuestionText>
+              <UnorderedList>
+                <li>Build new awareness</li>
+                <li>Reflect on experiences, not just experience it</li>
+                <li>Challenge your beliefs</li>
+                <li>
+                  Stretch out of your comfortable zone ( yes, it is scary)
+                </li>
+                <li>Reprogram your mindset and creating long lasting impact</li>
+                <li>I am not here to please you, I am here to serving you</li>
+              </UnorderedList>
             </div>
           </CoachingWrapper>
         </PageWrapper>
@@ -105,17 +116,19 @@ const AboutCoaching = () => {
 };
 
 export default AboutCoaching;
-
 const Page = styled.div`
-  background: ${Colors["blue"]};
+  background: ${Colors.blue};
   height: 675px;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 
   @media screen and (max-width: 1300px) {
     height: 1025px;
+  }
+
+  @media screen and (max-width: 770px) {
+    height: 1900px;
   }
 `;
 
@@ -128,14 +141,6 @@ const TitleWrapper = styled.div`
   }
 `;
 
-const CardImg = styled.img`
-  height: 175px;
-  width: 1000px;
-  object-fit: cover;
-  filter: grayscale(100%);
-  opacity: 0.3;
-`;
-
 const PageWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -144,7 +149,7 @@ const PageWrapper = styled.div`
 `;
 
 const Title = styled.div`
-  color: ${Colors["orange"]};
+  color: ${Colors.orange};
   font-family: "Bebas Neue", cursive;
   font-size: 4rem;
   margin: 0px 0px 50px 0px;
@@ -163,7 +168,7 @@ const Title = styled.div`
 `;
 
 const Header = styled.div`
-  color: ${Colors["white"]};
+  color: ${Colors.white};
   font-family: "Kdam Thmor Pro", sans-serif;
   font-size: 1.2rem;
 `;
@@ -171,30 +176,50 @@ const Header = styled.div`
 const CoachingWrapper = styled.div`
   width: 1150px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 
   @media screen and (max-width: 1300px) {
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
     width: fit-content;
+  }
+
+  @media screen and (max-width: 770px) {
+    grid-template-columns: 1fr;
   }
 `;
 
 const QuestionText = styled.div`
-  color: ${Colors["orange"]};
+  color: ${Colors.orange};
   font-family: "Kdam Thmor Pro", sans-serif;
-  font-size: 2.5rem;
-  position: absolute;
+  font-size: 1.5rem;
 `;
 
 const AnswerText = styled.div`
-  color: ${Colors["white"]};
+  color: ${Colors.darkBlue};
   font-family: "Kdam Thmor Pro", sans-serif;
-  font-size: 0.75rem;
+  font-size: 1rem;
 `;
 
-const Text = styled.div`
-  color: ${Colors["white"]};
+const Table = styled.table`
+  width: 100%;
+  height: 100%;
+  color: ${Colors.darkBlue};
   font-family: "Kdam Thmor Pro", sans-serif;
-  font-size: 1.2rem;
-  position: absolute;
+  font-size: 0.8rem;
+`;
+
+const TableCell = styled.td`
+  border: solid;
+  padding: 5px 10px;
+  text-align: center;
+  color: ${Colors.darkBlue};
+`;
+
+const UnorderedList = styled.ul`
+  color: ${Colors.darkBlue};
+  font-family: "Kdam Thmor Pro", sans-serif;
+  font-size: 0.9rem;
+  margin-left: 20px;
 `;
