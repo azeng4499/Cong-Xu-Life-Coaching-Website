@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
 import Testimony1 from "../images/Babaraba.jpeg";
 import Testimony2 from "../images/xiaoli.jpeg";
-import Testimony3 from "../images/guy.jpg";
+import Testimony3 from "../images/frank.jpeg";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { Colors } from "../utils/colors";
@@ -90,10 +90,14 @@ const Testimony = () => {
                 ) : (
                   <div>
                     <div>
-                      As far as her presentation, Laura spent the extra time to
-                      understand our audience and she incorporated those
-                      learnings into her presentation, which made a huge
-                      difference.
+                      I was not into the idea of having a coach while starting
+                      my business. However, after just one session with Amy, I
+                      found myself with a renewed sense of focus. Amy has a
+                      talent for listening and allowing you to find your own
+                      path. My sessions with her helped me step outside my
+                      comfort zone and find the courage to face challenges by
+                      setting priorities and deadlines. I am grateful to her
+                      because she has taught me how to be accountable to myself.
                     </div>
                   </div>
                 )}
@@ -137,7 +141,7 @@ const Testimony = () => {
                   changePerson("person3");
                 }}
               />
-              <TestimonyPersonLabel>Johnny Phelps</TestimonyPersonLabel>
+              <TestimonyPersonLabel>Frank Pugliese</TestimonyPersonLabel>
             </TestimonyPersonContainer>
           </TestimonyToolbar>
         </TestimonyWrapper>
