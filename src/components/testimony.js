@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
-import Testimony1 from "../images/guy.jpg";
-import Testimony2 from "../images/guy.jpg";
+import Testimony1 from "../images/Babaraba.jpeg";
+import Testimony2 from "../images/xiaoli.jpeg";
 import Testimony3 from "../images/guy.jpg";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -72,17 +72,19 @@ const Testimony = () => {
               <TestimonyText>
                 {people.person1 ? (
                   <div>
-                    She is a consummate REAL professional (on time, embodies her
-                    work, delivers, inspires, transforms). Laura has ‘staying
-                    power - stickiness’.
+                    I coached with Cong, who taught me how to have a mirror ( of
+                    course not the mirror hanging on the wall!). By following
+                    her questions, I could listen to myself and talk to myself,
+                    and Cong did a great job letting me reflect on what came
+                    from my true heart and directing me on the path along the
+                    way. I strongly recommend you take a coaching
                   </div>
                 ) : people.person2 ? (
                   <div>
                     <div>
-                      In a highly engaging session at GE Healthcare, she
-                      delivered simple, yet highly impactful life lessons to the
-                      employees. The audience walked away with tangible actions
-                      on how to live a limitless life.
+                      Life coaching helped me understand myself better, overcome
+                      obstacles and maximize my strengths in my personal and
+                      professional lives.
                     </div>
                   </div>
                 ) : (
@@ -115,7 +117,7 @@ const Testimony = () => {
                   changePerson("person1");
                 }}
               />
-              <TestimonyPersonLabel>Whitney Watson</TestimonyPersonLabel>
+              <TestimonyPersonLabel>Barbara Wilkinson</TestimonyPersonLabel>
             </TestimonyPersonContainer>
             <TestimonyPersonContainer>
               <TestimonyPerson
@@ -125,7 +127,7 @@ const Testimony = () => {
                   changePerson("person2");
                 }}
               />
-              <TestimonyPersonLabel>Gerard Hamilton</TestimonyPersonLabel>
+              <TestimonyPersonLabel>Xiao Li</TestimonyPersonLabel>
             </TestimonyPersonContainer>
             <TestimonyPersonContainer>
               <TestimonyPerson
@@ -192,7 +194,7 @@ const Title = styled.div`
 
 const TestimonyText = styled.div`
   font-family: "Kdam Thmor Pro", sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   max-width: 1000px;
   color: ${Colors.white};
   text-align: center;
@@ -203,7 +205,7 @@ const TestimonyText = styled.div`
 
   @media screen and (max-width: 775px) {
     max-width: 300px;
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   @media screen and (max-width: 775px) {
@@ -271,7 +273,7 @@ const TestimonyPerson = styled.img`
   width: 100px;
   object-fit: cover;
   border-radius: 50%;
-  object-position: 60% 75%;
+  object-position: center;
   border: solid 5px;
   border-color: ${({ highlighted }) =>
     highlighted ? Colors.orange : Colors.white};

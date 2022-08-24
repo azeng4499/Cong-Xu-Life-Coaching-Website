@@ -21,18 +21,24 @@ const Navbar = () => {
     <Nav>
       <Header>
         <HeaderText>Follow on </HeaderText>
-        <HeaderText>
-          <BsInstagram />
-        </HeaderText>
-        <HeaderText>
-          <BsLinkedin />
-        </HeaderText>
-        <HeaderText>
-          <BsTwitter />
-        </HeaderText>
-        <HeaderText>
-          <BsFacebook />
-        </HeaderText>
+        <a
+          href="https://www.linkedin.com/in/congx/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <HeaderText>
+            <BsLinkedin />
+          </HeaderText>
+        </a>
+        <a
+          href="https://www.facebook.com/amy.xu.1675"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <HeaderText>
+            <BsFacebook />
+          </HeaderText>
+        </a>
         <HeaderText>||</HeaderText>
         <HeaderText
           onClick={() => dispatch(setChinese(!chinese))}

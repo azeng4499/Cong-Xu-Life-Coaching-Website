@@ -283,7 +283,7 @@ const CloseButton = styled.div`
 
 const ModalContainer = styled.div`
   height: calc(100vh - 300px);
-  width: calc(100vw - 50px);
+  width: calc(100vw * 0.9);
   background: red;
 `;
 

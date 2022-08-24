@@ -13,10 +13,23 @@ const Footer = () => {
         Coaching
       </FooterText>
       <FooterText>
-        Follow on: <BsInstagram style={{ margin: "0 8px" }} />
-        <BsLinkedin style={{ margin: "0 8px" }} />
-        <BsTwitter style={{ margin: "0 8px" }} />
-        <BsFacebook style={{ margin: "0 8px" }} />
+        Follow on:
+        <a
+          href="https://www.linkedin.com/in/congx/"
+          target="_blank"
+          rel="noreferrer"
+          style={{ color: "white" }}
+        >
+          <BsLinkedin style={{ margin: "0 8px" }} />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/congx/"
+          target="_blank"
+          rel="noreferrer"
+          style={{ color: "white" }}
+        >
+          <BsFacebook style={{ margin: "0 8px" }} />
+        </a>
       </FooterText>
     </FooterContainer>
   );
