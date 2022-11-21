@@ -30,10 +30,7 @@ const Navbar = () => {
             <BsLinkedin />
           </HeaderText>
         </a>
-        <a
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a target="_blank" rel="noreferrer">
           <HeaderText>
             <BsFacebook />
           </HeaderText>
@@ -48,7 +45,7 @@ const Navbar = () => {
       </Header>
       <NavContainer>
         <LogoImg src={Logo} onClick={() => animateScroll.scrollToTop()} />
-        <MenuIcon>
+        <MenuIcon onClick={() => dispatch(setNavOpen(!navOpen))}>
           <FaBars
             size={"1.5em"}
             color={Colors.white}
