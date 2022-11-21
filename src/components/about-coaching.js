@@ -37,11 +37,11 @@ const AboutCoaching = () => {
             <div className="card">
               <QuestionText>What is coaching?</QuestionText>
               <AnswerText>
-                Coaching is about to connect to your human energy. To
+                Coaching is about connecting to your human energy. About 
                 identifying and closing the gap between where you are right now
-                and where you want to be in the future.  Coach act as a mirror
-                to reflect and what you really want, what is the blind spot that
-                hold you back and take the new action to achieve it.
+                and where you want to be in the future.  Coaches act as a mirror
+                to reflect what you really want. What is the blind spot that
+                holds you back? Take the new action to achieve it.
               </AnswerText>
             </div>
             <div className="card">
@@ -51,21 +51,21 @@ const AboutCoaching = () => {
                   <th style={{ border: "solid", padding: "1px 10px" }}>
                     Coach
                   </th>
-                  <th style={{ border: "solid", padding: "1px 10px" }}>
+                  <th style={{ border: "solid", padding: "1px 10px", color: Colors.gray }}>
                     Therapist
                   </th>
                 </tr>
                 <tr>
-                  <TableCell>Focuses on the past</TableCell>
                   <TableCell>Focuses on the future</TableCell>
+                  <TableCell_compare>Focuses on the past</TableCell_compare>
                 </tr>
                 <tr>
-                  <TableCell>Asks about the problem</TableCell>
                   <TableCell>Asks about the possibility</TableCell>
+                  <TableCell_compare>Asks about the problem</TableCell_compare>
                 </tr>
                 <tr>
-                  <TableCell>Clinical & Diagnostic</TableCell>
-                  <TableCell>Not Clinical & Diagonstic</TableCell>
+                  <TableCell>Is not Clinical & Diagnostic</TableCell>
+                  <TableCell_compare>Is clinical & Diagonstic</TableCell_compare>
                 </tr>
               </Table>
             </div>
@@ -76,36 +76,36 @@ const AboutCoaching = () => {
                   <th style={{ border: "solid", padding: "1px 10px" }}>
                     Coach
                   </th>
-                  <th style={{ border: "solid", padding: "1px 10px" }}>
+                  <th style={{ border: "solid", padding: "1px 10px", color: Colors.gray }}>
                     Consultant
                   </th>
                 </tr>
                 <tr>
-                  <TableCell>Will provide suggestions</TableCell>
-                  <TableCell>
-                    Won’t provide suggestions, believe clients know the answer.
-                  </TableCell>
+                  <TableCell>Won’t provide suggestions, believes clients know the answer</TableCell>
+                  <TableCell_compare>
+                  Will provide suggestions
+                  </TableCell_compare>
                 </tr>
                 <tr>
-                  <TableCell>Focuses on “How” to get there.</TableCell>
                   <TableCell>
-                    Focuses on “What” before the “How”, gain the power from the
-                    vision.
-                  </TableCell>
+                  Focuses first on “What” (vision), and then on “How” (method)</TableCell>
+                  <TableCell_compare>
+                  Focuses  on “How” (method)
+                  </TableCell_compare>
                 </tr>
               </Table>
             </div>
             <div className="card">
               <QuestionText>What will coaching bring?</QuestionText>
               <UnorderedList>
-                <li>Build new awareness</li>
-                <li>Reflect on experiences, not just experience it</li>
-                <li>Challenge your beliefs</li>
+                <li>Builds new awareness</li>
+                <li>Lets you reflect on experiences, not just have them</li>
+                <li>Challenges your beliefs</li>
                 <li>
-                  Stretch out of your comfortable zone ( yes, it is scary)
+                  Stretches you out of your comfort zone ( yes, it is scary)
                 </li>
-                <li>Reprogram your mindset and creating long lasting impact</li>
-                <li>I am not here to please you, I am here to serving you</li>
+                <li>Reprograms your mindset and creates a long-lasting impact</li>
+                <li>Is not here to please you, but to serve you</li>
               </UnorderedList>
             </div>
           </CoachingWrapper>
@@ -215,6 +215,13 @@ const TableCell = styled.td`
   padding: 5px 10px;
   text-align: center;
   color: ${Colors.darkBlue};
+`;
+
+const TableCell_compare = styled.td`
+  border: solid;
+  padding: 5px 10px;
+  text-align: center;
+  color: ${Colors.gray};
 `;
 
 const UnorderedList = styled.ul`

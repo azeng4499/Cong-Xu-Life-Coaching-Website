@@ -1,18 +1,24 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
-import Testimony1 from "../images/Babaraba.jpeg";
-import Testimony2 from "../images/xiaoli.jpeg";
-import Testimony3 from "../images/frank.jpeg";
+import Testimony1 from "../images/Leigh.png";
+import Testimony2 from "../images/Cat.png";
+import Testimony3 from "../images/Anna.jpg";
+import Testimony4 from "../images/Babaraba.jpeg";
+import Testimony5 from "../images/frank.jpeg";
+import Testimony6 from "../images/xiaoli.jpeg";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { Colors } from "../utils/colors";
 
 const Testimony = () => {
   const [people, setPeople] = useState({
-    person1: false,
-    person2: true,
+    person1: true,
+    person2: false,
     person3: false,
+    person4: false,
+    person5: false,
+    person6: false,   
   });
   useEffect(() => {
     Aos.init({ duration: 1500 });
@@ -24,10 +30,16 @@ const Testimony = () => {
         changePerson("person2");
       } else if (people["person2"]) {
         changePerson("person3");
+      } else if (people["person4"]) {
+        changePerson("person4");
+      } else if (people["person4"]) {
+        changePerson("person5");
+      } else if (people["person5"]) {
+        changePerson("person6");
       } else {
         changePerson("person1");
       }
-    }, 5000);
+    }, 10000);
 
     return () => {
       clearInterval(interval);
@@ -36,11 +48,17 @@ const Testimony = () => {
 
   const changePerson = (person) => {
     if (person === "person1") {
-      setPeople({ person1: true, person2: false, person3: false });
+      setPeople({ person1: true, person2: false, person3: false, person4: false , person5: false, person6: false });
     } else if (person === "person2") {
-      setPeople({ person1: false, person2: true, person3: false });
+      setPeople({ person1: false, person2: true, person3: false, person4: false , person5: false, person6: false  });
+    } else if (person === "person3") {
+      setPeople({ person1: false, person2: false, person3: true, person4: false , person5: false, person6: false  });
+    } else if (person === "person4") {
+      setPeople({ person1: false, person2: false, person3: false, person4: true , person5: false, person6: false  });
+    } else if (person === "person5") {
+      setPeople({ person1: false, person2: false, person3: false, person4: false , person5: true, person6: false  });
     } else {
-      setPeople({ person1: false, person2: false, person3: true });
+      setPeople({ person1: false, person2: false, person3: false, person4: false , person5: false, person6: true  });
     }
   };
 
@@ -70,34 +88,63 @@ const Testimony = () => {
             <div style={{ display: "flex" }}>
               <RiDoubleQuotesL size={"2em"} style={{ color: Colors.white }} />
               <TestimonyText>
-                {people.person1 ? (
+                {
+                people.person1 ? (
+                  <div>
+                    The work I did with Cong lifted what felt like a huge weight of 
+                    concern and wasted energy from my shoulders.  Cong's deep listening 
+                    and her reflecting back to me what I had shared gave me the opportunity 
+                    to see my situation from a different lens in my mind.  The clarity of 
+                    her reflection allowed me to release the unnecessary burden I had 
+                    placed on myself, to accept a situation without having to change it.  
+                    I feel so much happier and at peace with myself and others because of 
+                    my time with Cong......Cong is a blessing!
+                  </div>
+                ) : people.person2 ? (
+                  <div>
+                    Through her excellent coaching skills, Cong gently led me to an inner path
+                     that has always been there, but that somehow I had lost sight of.  
+                     That's the amazing thing–we all have subconscious beliefs that can hold
+                      us back from becoming the best person we can possibly be.  Cong's
+                       coaching let me brush the cobwebs from my own mirror to see the hidden
+                        but ever-present and true potential within myself that is joyfully 
+                        within my reach.
+                  </div>
+                ) : people.person3 ? (
+                  <div>
+                    Working with Cong has been a delightful enlightening experience. 
+                    She has helped me become more aware of my own internal processes, 
+                    clarify my overall wants and goals, and provided a sense of support 
+                    and accountability.
+                  </div>
+                ) : people.person4 ? (
                   <div>
                     I coached with Cong, who taught me how to have a mirror ( of
                     course not the mirror hanging on the wall!). By following
                     her questions, I could listen to myself and talk to myself,
                     and Cong did a great job letting me reflect on what came
                     from my true heart and directing me on the path along the
-                    way. I strongly recommend you take a coaching
+                    way. I strongly recommend you take a coaching.
                   </div>
-                ) : people.person2 ? (
-                  <div>
-                    <div>
-                      Life coaching helped me understand myself better, overcome
-                      obstacles and maximize my strengths in my personal and
-                      professional lives.
-                    </div>
-                  </div>
-                ) : (
+                ) : people.person5 ? (
                   <div>
                     <div>
                       I was not into the idea of having a coach while starting
-                      my business. However, after just one session with Amy, I
-                      found myself with a renewed sense of focus. Amy has a
+                      my business. However, after just one session with Cong, I
+                      found myself with a renewed sense of focus. Cong has a
                       talent for listening and allowing you to find your own
                       path. My sessions with her helped me step outside my
                       comfort zone and find the courage to face challenges by
                       setting priorities and deadlines. I am grateful to her
                       because she has taught me how to be accountable to myself.
+                    </div>
+                  </div>
+                ) : (
+                  <div>
+                    <div>
+                      Life coaching helped me understand myself better, overcome
+                      obstacles and maximize my strengths in my personal and
+                      professional lives.
                     </div>
                   </div>
                 )}
@@ -113,7 +160,7 @@ const Testimony = () => {
             </div>
           </TestimonyContainer>
           <TestimonyToolbar data-aos="fade-up" data-aos-once="true">
-            <TestimonyPersonContainer>
+          <TestimonyPersonContainer>
               <TestimonyPerson
                 src={Testimony1}
                 highlighted={people.person1}
@@ -121,7 +168,7 @@ const Testimony = () => {
                   changePerson("person1");
                 }}
               />
-              <TestimonyPersonLabel>Barbara Wilkinson</TestimonyPersonLabel>
+              <TestimonyPersonLabel>Leigh Smiley</TestimonyPersonLabel>
             </TestimonyPersonContainer>
             <TestimonyPersonContainer>
               <TestimonyPerson
@@ -131,7 +178,7 @@ const Testimony = () => {
                   changePerson("person2");
                 }}
               />
-              <TestimonyPersonLabel>Xiao Li</TestimonyPersonLabel>
+              <TestimonyPersonLabel>Caterina Maxwell</TestimonyPersonLabel>
             </TestimonyPersonContainer>
             <TestimonyPersonContainer>
               <TestimonyPerson
@@ -141,7 +188,37 @@ const Testimony = () => {
                   changePerson("person3");
                 }}
               />
+              <TestimonyPersonLabel>Anna Jordan</TestimonyPersonLabel>
+            </TestimonyPersonContainer>
+            <TestimonyPersonContainer>
+              <TestimonyPerson
+                src={Testimony4}
+                highlighted={people.person4}
+                onClick={() => {
+                  changePerson("person4");
+                }}
+              />
+              <TestimonyPersonLabel>Barbara Wilkinson</TestimonyPersonLabel>
+            </TestimonyPersonContainer>
+            <TestimonyPersonContainer>
+              <TestimonyPerson
+                src={Testimony5}
+                highlighted={people.person5}
+                onClick={() => {
+                  changePerson("person5");
+                }}
+              />
               <TestimonyPersonLabel>Frank Pugliese</TestimonyPersonLabel>
+            </TestimonyPersonContainer>
+            <TestimonyPersonContainer>
+              <TestimonyPerson
+                src={Testimony6}
+                highlighted={people.person6}
+                onClick={() => {
+                  changePerson("person6");
+                }}
+              />
+              <TestimonyPersonLabel>Xiao Li</TestimonyPersonLabel>
             </TestimonyPersonContainer>
           </TestimonyToolbar>
         </TestimonyWrapper>

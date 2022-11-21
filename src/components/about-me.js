@@ -34,20 +34,22 @@ const AboutMe = () => {
                 </span>{" "}
                 {Translate("My name is Cong")}
               </span>{" "}
-              I am an immigrant from Qingdao, China, a beautiful city I love. It
-              has a rich history, including once being a colony of Germany and
-              now the home of the famous Tsingtao beer. I came to the US as a
-              graduate student to study Educational Psychology. Upon graduating,
-              I became an elementary school teacher, but I was unhappy with that
-              job. After struggling and talking to many people, I thought I
-              would be happier with a business degree. I went back to school to
-              get a master’s in accounting and followed the typical career path
-              to work in corporate America, yet, I was still not happy. Finally, I 
-              talked to a life coach to learn more about myself. I
-              discovered that I enjoyed the process and decided I wanted to be a
-              life coach too! After graduating from the ICF coaching program, I have
-              begun to coach other people. Working as a coach, I can finally
-              enjoy my work and be the person I want to be.
+              I grew up in the beautiful and richly historic city of Qingdao in China. 
+              A former colony of Germany, this city  is now home to the famous Tsingtao beer.
+              I came to the US as a graduate student and earned a master's in educational psychology. 
+                I love to discover people's inner selves.  Work opportunities  directed me toward a job 
+                as an elementary school teacher, but I did not find this to be my calling. I then went 
+                on to earn a master’s degree in business from the University of Maryland and worked 
+                in the corporate world. It did not take me long to discover that this, too, did not 
+                feed my soul.  I kept searching within to understand my true passion.
+              <p>&nbsp; &nbsp; &nbsp; &nbsp; By a stroke of luck, I talked to an ontological life coach to learn more about myself. 
+                  I enjoyed the process of discovering my subconscious self  and was amazed by what I 
+                  saw–a layer of myself that had always been there but that I had never seen.  This 
+                  revelation brought me back full circle to my love of discovering people's inner selves.  
+                I knew then that I had found a true path. I was inspired to become a  coach myself! 
+                After graduating from the International Coaching Federation (ICF) program, and 
+                certificated as a ICF ACC coach, I started my own practice and have found it a very 
+                rewarding experience.  </p>
             </IntroText>
           </IntroContainer>
           <PictureContainer data-aos="fade-up" data-aos-once="true">
@@ -83,12 +85,12 @@ const HeaderWrapper = styled.div`
 
 const PictureContainer = styled.div`
   height: 320px;
-  width: 320px;
+  width: 214px;
   position: relative;
 
   @media screen and (max-width: 375px) {
     height: 295px;
-    width: 295px;
+    width: 197px;
   }
 `;
 
@@ -130,7 +132,7 @@ const Header = styled.div`
 `;
 
 const IntroContainer = styled.div`
-  max-width: 800px;
+  max-width: 900px;
   margin-right: 40px;
 
   @media screen and (max-width: 1300px) {
@@ -173,7 +175,7 @@ const IntroText = styled.div`
 
 const Portrait = styled.img`
   height: 300px;
-  width: 300px;
+  width: 210px;
   border-radius: 10px;
   position: absolute;
   border: solid;
@@ -183,7 +185,7 @@ const Portrait = styled.img`
 
   @media screen and (max-width: 375px) {
     height: 275px;
-    width: 275px;
+    width: 190px;
   }
 
   &:hover {
@@ -193,7 +195,7 @@ const Portrait = styled.img`
 
 const PortraitBorder = styled.div`
   height: 300px;
-  width: 300px;
+  width: 210px;
   border-radius: 10px;
   border: solid;
   border-width: 3px;
@@ -202,7 +204,7 @@ const PortraitBorder = styled.div`
 
   @media screen and (max-width: 375px) {
     height: 275px;
-    width: 275px;
+    width: 190px;
   }
 `;
 

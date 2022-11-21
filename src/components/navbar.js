@@ -31,7 +31,6 @@ const Navbar = () => {
           </HeaderText>
         </a>
         <a
-          href="https://www.facebook.com/amy.xu.1675"
           target="_blank"
           rel="noreferrer"
         >

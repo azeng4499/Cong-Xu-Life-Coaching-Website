@@ -93,10 +93,6 @@ const TypesOfCoaching = () => {
               <Header>Types of Coaching</Header>
               <Title>How I Can Help</Title>
             </div>
-            <ReadMore onClick={() => setModalOpen(true)}>
-              <FaReadme />
-              Read more about each type
-            </ReadMore>
           </HeaderWrapper>
           <BlobWrapper>
             <BlobContainer data-aos="fade-up" data-aos-once="true">

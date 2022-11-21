@@ -7,9 +7,9 @@ import { Colors } from "../utils/colors";
 const Footer = () => {
   return (
     <FooterContainer>
-      <FooterText>Email at: amycxu@gmail.com</FooterText>
+      <FooterText>Email at: hello@cxucoaching.com</FooterText>
       <FooterText>
-        <RiCopyrightLine style={{ marginRight: "5px" }} /> 2022 Cong Xu Life
+        <RiCopyrightLine style={{ marginRight: "5px" }} /> 2022 Cong Xu
         Coaching
       </FooterText>
       <FooterText>
@@ -23,7 +23,6 @@ const Footer = () => {
           <BsLinkedin style={{ margin: "0 8px" }} />
         </a>
         <a
-          href="https://www.linkedin.com/in/congx/"
           target="_blank"
           rel="noreferrer"
           style={{ color: "white" }}
