@@ -126,161 +126,165 @@ const Testimony = () => {
             <Header>Testimonies</Header>
             <Title>What People Are Saying</Title>
           </TitleWrapper>
-          <TestimonyContainer data-aos="fade-up" data-aos-once="true">
-            <div
-              style={{
-                display: "flex",
-              }}
-            >
-              <RiDoubleQuotesL size={"2em"} style={{ color: Colors.white }} />
-              <TestimonyText>
+          <TestimonyContainerPlaceHolder>
+            <TestimonyContainer data-aos="fade-up" data-aos-once="true">
+              <div
+                style={{
+                  display: "flex",
+                }}
+              >
+                <RiDoubleQuotesL size={"2em"} style={{ color: Colors.white }} />
+                <TestimonyText>
+                  {people.person1 ? (
+                    <div>
+                      The work I did with Cong lifted what felt like a huge
+                      weight of concern and wasted energy from my shoulders.
+                      Cong's deep listening and her reflecting back to me what I
+                      had shared gave me the opportunity to see my situation
+                      from a different lens in my mind. The clarity of her
+                      reflection allowed me to release the unnecessary burden I
+                      had placed on myself, to accept a situation without having
+                      to change it. I feel so much happier and at peace with
+                      myself and others because of my time with Cong......Cong
+                      is a blessing!
+                    </div>
+                  ) : people.person2 ? (
+                    <div>
+                      Through her excellent coaching skills, Cong gently led me
+                      to an inner path that has always been there, but that
+                      somehow I had lost sight of. That's the amazing thing–we
+                      all have subconscious beliefs that can hold us back from
+                      becoming the best person we can possibly be. Cong's
+                      coaching let me brush the cobwebs from my own mirror to
+                      see the hidden but ever-present and true potential within
+                      myself that is joyfully within my reach.
+                    </div>
+                  ) : people.person3 ? (
+                    <div>
+                      Working with Cong has been a delightful enlightening
+                      experience. She has helped me become more aware of my own
+                      internal processes, clarify my overall wants and goals,
+                      and provided a sense of support and accountability.
+                    </div>
+                  ) : people.person4 ? (
+                    <div>
+                      I coached with Cong, who taught me how to have a mirror (
+                      of course not the mirror hanging on the wall!). By
+                      following her questions, I could listen to myself and talk
+                      to myself, and Cong did a great job letting me reflect on
+                      what came from my true heart and directing me on the path
+                      along the way. I strongly recommend you take a coaching.
+                    </div>
+                  ) : people.person5 ? (
+                    <div>
+                      <div>
+                        I was not into the idea of having a coach while starting
+                        my business. However, after just one session with Cong,
+                        I found myself with a renewed sense of focus. Cong has a
+                        talent for listening and allowing you to find your own
+                        path. My sessions with her helped me step outside my
+                        comfort zone and find the courage to face challenges by
+                        setting priorities and deadlines. I am grateful to her
+                        because she has taught me how to be accountable to
+                        myself.
+                      </div>
+                    </div>
+                  ) : (
+                    <div>
+                      <div>
+                        Life coaching helped me understand myself better,
+                        overcome obstacles and maximize my strengths in my
+                        personal and professional lives.
+                      </div>
+                    </div>
+                  )}
+                </TestimonyText>
+                <RiDoubleQuotesR
+                  size={"2em"}
+                  style={{
+                    justifySelf: "end",
+                    alignSelf: "end",
+                    color: Colors.white,
+                  }}
+                />
+              </div>
+              <div>
                 {people.person1 ? (
-                  <div>
-                    The work I did with Cong lifted what felt like a huge weight
-                    of concern and wasted energy from my shoulders. Cong's deep
-                    listening and her reflecting back to me what I had shared
-                    gave me the opportunity to see my situation from a different
-                    lens in my mind. The clarity of her reflection allowed me to
-                    release the unnecessary burden I had placed on myself, to
-                    accept a situation without having to change it. I feel so
-                    much happier and at peace with myself and others because of
-                    my time with Cong......Cong is a blessing!
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      gap: "20px",
+                    }}
+                  >
+                    <TestimonyText>- Leigh Smiley</TestimonyText>
+                    <TestimonyPerson src={Testimony1}></TestimonyPerson>
                   </div>
                 ) : people.person2 ? (
-                  <div>
-                    Through her excellent coaching skills, Cong gently led me to
-                    an inner path that has always been there, but that somehow I
-                    had lost sight of. That's the amazing thing–we all have
-                    subconscious beliefs that can hold us back from becoming the
-                    best person we can possibly be. Cong's coaching let me brush
-                    the cobwebs from my own mirror to see the hidden but
-                    ever-present and true potential within myself that is
-                    joyfully within my reach.
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      gap: "20px",
+                    }}
+                  >
+                    <TestimonyText>- Caterina Maxwell</TestimonyText>
+                    <TestimonyPerson src={Testimony2}></TestimonyPerson>
                   </div>
                 ) : people.person3 ? (
-                  <div>
-                    Working with Cong has been a delightful enlightening
-                    experience. She has helped me become more aware of my own
-                    internal processes, clarify my overall wants and goals, and
-                    provided a sense of support and accountability.
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      gap: "20px",
+                    }}
+                  >
+                    <TestimonyText>- Anna Jordan</TestimonyText>
+                    <TestimonyPerson src={Testimony3}></TestimonyPerson>
                   </div>
                 ) : people.person4 ? (
-                  <div>
-                    I coached with Cong, who taught me how to have a mirror ( of
-                    course not the mirror hanging on the wall!). By following
-                    her questions, I could listen to myself and talk to myself,
-                    and Cong did a great job letting me reflect on what came
-                    from my true heart and directing me on the path along the
-                    way. I strongly recommend you take a coaching.
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      gap: "20px",
+                    }}
+                  >
+                    <TestimonyText>- Barbara Wilkinson</TestimonyText>
+                    <TestimonyPerson src={Testimony4}></TestimonyPerson>
                   </div>
                 ) : people.person5 ? (
-                  <div>
-                    <div>
-                      I was not into the idea of having a coach while starting
-                      my business. However, after just one session with Cong, I
-                      found myself with a renewed sense of focus. Cong has a
-                      talent for listening and allowing you to find your own
-                      path. My sessions with her helped me step outside my
-                      comfort zone and find the courage to face challenges by
-                      setting priorities and deadlines. I am grateful to her
-                      because she has taught me how to be accountable to myself.
-                    </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      gap: "20px",
+                    }}
+                  >
+                    <TestimonyText>- Frank Puglies</TestimonyText>
+                    <TestimonyPerson src={Testimony5}></TestimonyPerson>
                   </div>
                 ) : (
-                  <div>
-                    <div>
-                      Life coaching helped me understand myself better, overcome
-                      obstacles and maximize my strengths in my personal and
-                      professional lives.
-                    </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      gap: "20px",
+                    }}
+                  >
+                    <TestimonyText>- Xiao Li</TestimonyText>
+                    <TestimonyPerson src={Testimony6}></TestimonyPerson>
                   </div>
                 )}
-              </TestimonyText>
-              <RiDoubleQuotesR
-                size={"2em"}
-                style={{
-                  justifySelf: "end",
-                  alignSelf: "end",
-                  color: Colors.white,
-                }}
-              />
-            </div>
-            <div>
-              {people.person1 ? (
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    gap: "20px",
-                  }}
-                >
-                  <TestimonyText>- Leigh Smiley</TestimonyText>
-                  <TestimonyPerson src={Testimony1}></TestimonyPerson>
-                </div>
-              ) : people.person2 ? (
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    gap: "20px",
-                  }}
-                >
-                  <TestimonyText>- Caterina Maxwell</TestimonyText>
-                  <TestimonyPerson src={Testimony2}></TestimonyPerson>
-                </div>
-              ) : people.person3 ? (
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    gap: "20px",
-                  }}
-                >
-                  <TestimonyText>- Anna Jordan</TestimonyText>
-                  <TestimonyPerson src={Testimony3}></TestimonyPerson>
-                </div>
-              ) : people.person4 ? (
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    gap: "20px",
-                  }}
-                >
-                  <TestimonyText>- Barbara Wilkinson</TestimonyText>
-                  <TestimonyPerson src={Testimony4}></TestimonyPerson>
-                </div>
-              ) : people.person5 ? (
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    gap: "20px",
-                  }}
-                >
-                  <TestimonyText>- Frank Puglies</TestimonyText>
-                  <TestimonyPerson src={Testimony5}></TestimonyPerson>
-                </div>
-              ) : (
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    gap: "20px",
-                  }}
-                >
-                  <TestimonyText>- Xiao Li</TestimonyText>
-                  <TestimonyPerson src={Testimony6}></TestimonyPerson>
-                </div>
-              )}
-            </div>
-          </TestimonyContainer>
+              </div>
+            </TestimonyContainer>
+          </TestimonyContainerPlaceHolder>
           {/* <TestimonyToolbar data-aos="fade-up" data-aos-once="true">
           <TestimonyPersonContainer>
               <TestimonyPerson
@@ -416,19 +420,12 @@ const TestimonyText = styled.div`
   }
 `;
 
-const TestimonyContainer = styled.div`
+const TestimonyContainerPlaceHolder = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 250px;
   width: 1200px;
-  padding: 20px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-  border: solid;
-  border-radius: 40px;
-  border-width: 4px;
-  border-color: white;
-  background: ${Colors.darkBlue};
 
   @media screen and (max-width: 1300px) {
     width: 600px;
@@ -449,6 +446,41 @@ const TestimonyContainer = styled.div`
     width: 300px;
     height: 500px;
   }
+`;
+
+const TestimonyContainer = styled.div`
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  border: solid;
+  border-radius: 40px;
+  border-width: 4px;
+  border-color: white;
+  gap: 20px;
+  background: ${Colors.darkBlue};
+
+  // @media screen and (max-width: 1300px) {
+  //   width: 600px;
+  //   height: 400px;
+  // }
+
+  // @media screen and (max-width: 775px) {
+  //   width: 400px;
+  //   height: 550px;
+  // }
+
+  // @media screen and (max-width: 550px) {
+  //   width: 325px;
+  //   height: 500px;
+  // }
+
+  // @media screen and (max-width: 375px) {
+  //   width: 300px;
+  //   height: 500px;
+  // }
 `;
 
 // const TestimonyToolbar = styled.div`

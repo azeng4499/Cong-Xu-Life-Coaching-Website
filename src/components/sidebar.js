@@ -47,13 +47,13 @@ const Sidebar = () => {
         >
           Testimonies
         </SidebarLink>
-        <SideBtnWrap>
+        {/* <SideBtnWrap>
           <Button onClick={() => setCalendlyOpen(true)}>
             <ButtonText>Book Now</ButtonText>
           </Button>
-        </SideBtnWrap>
+        </SideBtnWrap> */}
       </SidebarMenu>
-      <PopupModal
+      {/* <PopupModal
         url="https://calendly.com/cx-coaching/meetingcong"
         rootElement={document.getElementById("root")}
         text="Click here to schedule!"
@@ -64,7 +64,7 @@ const Sidebar = () => {
         }}
         onModalClose={() => setCalendlyOpen(false)}
         open={calendlyOpen}
-      />
+      /> */}
     </SidebarContainer>
   );
 };
