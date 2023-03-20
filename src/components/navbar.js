@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link as LinkS } from "react-scroll";
 import { BsInstagram, BsLinkedin, BsTwitter, BsFacebook } from "react-icons/bs";
 import { FaBars } from "react-icons/fa";
-import Logo from "../images/congxulogo.png";
+import Logo from "../images/cxclogo.png";
 import { animateScroll } from "react-scroll";
 import { PopupModal } from "react-calendly";
 import { useSelector, useDispatch } from "react-redux";
@@ -146,7 +146,7 @@ const NavContainer = styled.div`
 const LogoImg = styled.img`
   height: 65px;
   width: 300px;
-  object-fit: cover;
+  object-fit: fill;
 
   @media screen and (max-width: 415px) {
     height: 50px;
