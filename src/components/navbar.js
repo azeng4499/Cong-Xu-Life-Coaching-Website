@@ -1,21 +1,27 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { Link as LinkS } from "react-scroll";
 import { BsInstagram, BsLinkedin, BsTwitter, BsFacebook } from "react-icons/bs";
 import { FaBars } from "react-icons/fa";
 import Logo from "../images/cxclogo.png";
 import { animateScroll } from "react-scroll";
-import { PopupModal } from "react-calendly";
+// import { PopupModal } from "react-calendly";
 import { useSelector, useDispatch } from "react-redux";
 import { setChinese, setNavOpen } from "../store/actions";
 import { Translate } from "../utils/translate";
 import { Colors } from "../utils/colors";
+// import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-  const [calendlyOpen, setCalendlyOpen] = useState(false);
+  // const [calendlyOpen, setCalendlyOpen] = useState(false);
   const chinese = useSelector((state) => state.isChinese);
   const navOpen = useSelector((state) => state.navOpen);
   const dispatch = useDispatch();
+  // const navigate = useNavigate();
+  function openInNewTab(url) {
+    var win = window.open(url, "_blank");
+    win.focus();
+  }
 
   return (
     <Nav>
@@ -102,10 +108,10 @@ const Navbar = () => {
             </NavLinks>
           </li>
         </NavMenu>
-        <Button onClick={() => setCalendlyOpen(true)}>
+        <Button onClick={() => openInNewTab("http://localhost:3000/book-now")}>
           <ButtonText> {Translate("Book Now")}</ButtonText>
         </Button>
-        <PopupModal
+        {/* <PopupModal
           url="https://calendly.com/cx-coaching/meetingcong"
           rootElement={document.getElementById("root")}
           text="Click here to schedule!"
@@ -116,7 +122,7 @@ const Navbar = () => {
           }}
           onModalClose={() => setCalendlyOpen(false)}
           open={calendlyOpen}
-        />
+        /> */}
       </NavContainer>
     </Nav>
   );
@@ -196,16 +202,16 @@ const NavLinks = styled(LinkS)`
   margin: 0 2em;
   height: 100%;
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-family: "Anek Malayalam", sans-serif;
 
   &.active {
-    color: ${Colors.tan};
+    color: ${Colors.orange};
     font-weight: bold;
   }
 `;
 
-const Button = styled.button`
+export const Button = styled.button`
   //d1ae95
   //F05786
   background: ${Colors.orange};
@@ -221,7 +227,7 @@ const Button = styled.button`
   }
 `;
 
-const ButtonText = styled.div`
+export const ButtonText = styled.div`
   font-size: 1.2rem;
   font-family: "Kdam Thmor Pro", sans-serif;
   color: ${Colors.white};

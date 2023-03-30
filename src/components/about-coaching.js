@@ -37,7 +37,7 @@ const AboutCoaching = () => {
             <div className="card">
               <QuestionText>What is coaching?</QuestionText>
               <AnswerText>
-                Coaching is about connecting to your human energy. About 
+                Coaching is about connecting to your human energy. About
                 identifying and closing the gap between where you are right now
                 and where you want to be in the future.  Coaches act as a mirror
                 to reflect what you really want. What is the blind spot that
@@ -51,7 +51,13 @@ const AboutCoaching = () => {
                   <th style={{ border: "solid", padding: "1px 10px" }}>
                     Coach
                   </th>
-                  <th style={{ border: "solid", padding: "1px 10px", color: Colors.gray }}>
+                  <th
+                    style={{
+                      border: "solid",
+                      padding: "1px 10px",
+                      color: Colors.gray,
+                    }}
+                  >
                     Therapist
                   </th>
                 </tr>
@@ -65,7 +71,9 @@ const AboutCoaching = () => {
                 </tr>
                 <tr>
                   <TableCell>Is not Clinical & Diagnostic</TableCell>
-                  <TableCell_compare>Is clinical & Diagonstic</TableCell_compare>
+                  <TableCell_compare>
+                    Is clinical & Diagonstic
+                  </TableCell_compare>
                 </tr>
               </Table>
             </div>
@@ -76,21 +84,30 @@ const AboutCoaching = () => {
                   <th style={{ border: "solid", padding: "1px 10px" }}>
                     Coach
                   </th>
-                  <th style={{ border: "solid", padding: "1px 10px", color: Colors.gray }}>
+                  <th
+                    style={{
+                      border: "solid",
+                      padding: "1px 10px",
+                      color: Colors.gray,
+                    }}
+                  >
                     Consultant
                   </th>
                 </tr>
                 <tr>
-                  <TableCell>Won’t provide suggestions, believes clients know the answer</TableCell>
+                  <TableCell>
+                    Won’t provide suggestions, believes clients know the answer
+                  </TableCell>
                   <TableCell_compare>
-                  Will provide suggestions
+                    Will provide suggestions
                   </TableCell_compare>
                 </tr>
                 <tr>
                   <TableCell>
-                  Focuses first on “What” (vision), and then on “How” (method)</TableCell>
+                    Focuses first on “What” (vision), and then on “How” (method)
+                  </TableCell>
                   <TableCell_compare>
-                  Focuses  on “How” (method)
+                    Focuses on “How” (method)
                   </TableCell_compare>
                 </tr>
               </Table>
@@ -104,7 +121,9 @@ const AboutCoaching = () => {
                 <li>
                   Stretches you out of your comfort zone ( yes, it is scary)
                 </li>
-                <li>Reprograms your mindset and creates a long-lasting impact</li>
+                <li>
+                  Reprograms your mindset and creates a long-lasting impact
+                </li>
                 <li>Is not here to please you, but to serve you</li>
               </UnorderedList>
             </div>
@@ -118,18 +137,19 @@ const AboutCoaching = () => {
 export default AboutCoaching;
 const Page = styled.div`
   background: ${Colors.blue};
-  height: 675px;
+  padding: 75px 0px;
+  // height: 675px;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  @media screen and (max-width: 1300px) {
-    height: 1025px;
-  }
+  // @media screen and (max-width: 1300px) {
+  //   height: 1025px;
+  // }
 
-  @media screen and (max-width: 770px) {
-    height: 1900px;
-  }
+  // @media screen and (max-width: 770px) {
+  //   height: 1900px;
+  // }
 `;
 
 const TitleWrapper = styled.div`

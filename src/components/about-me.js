@@ -44,17 +44,19 @@ const AboutMe = () => {
               the University of Maryland and worked in the corporate world. It
               did not take me long to discover that this, too, did not feed my
               soul. I kept searching within to understand my true passion.
+              <br />
+              <br />
               <p>
-                &nbsp; &nbsp; &nbsp; &nbsp; By a stroke of luck, I talked to an
-                ontological life coach to learn more about myself. I enjoyed the
-                process of discovering my subconscious self and was amazed by
-                what I saw–a layer of myself that had always been there but that
-                I had never seen. This revelation brought me back full circle to
-                my love of discovering people's inner selves. I knew then that I
-                had found a true path. I was inspired to become a coach myself!
-                After graduating from the International Coaching Federation
-                (ICF) program, and certificated as a ICF ACC coach, I started my
-                own practice and have found it a very rewarding experience.{" "}
+                By a stroke of luck, I talked to an ontological life coach to
+                learn more about myself. I enjoyed the process of discovering my
+                subconscious self and was amazed by what I saw–a layer of myself
+                that had always been there but that I had never seen. This
+                revelation brought me back full circle to my love of discovering
+                people's inner selves. I knew then that I had found a true path.
+                I was inspired to become a coach myself! After graduating from
+                the International Coaching Federation (ICF) program, and
+                certificated as a ICF ACC coach, I started my own practice and
+                have found it a very rewarding experience.{" "}
               </p>
             </IntroText>
           </IntroContainer>
@@ -138,7 +140,7 @@ const Header = styled.div`
 `;
 
 const IntroContainer = styled.div`
-  max-width: 900px;
+  max-width: 800px;
   margin-right: 40px;
 
   @media screen and (max-width: 1300px) {
@@ -167,7 +169,7 @@ const IntroContainer = styled.div`
 const IntroText = styled.div`
   color: ${Colors.darkBlue};
   font-family: "Kdam Thmor Pro", sans-serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
   // text-align: center;
 
   @media screen and (max-width: 415px) {

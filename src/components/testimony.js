@@ -15,6 +15,8 @@ import {
   BsFillArrowRightSquareFill,
 } from "react-icons/bs";
 
+import { MdArrowForwardIos, MdArrowBackIos } from "react-icons/md";
+
 const Testimony = () => {
   const [people, setPeople] = useState({
     person1: true,
@@ -241,7 +243,7 @@ const Testimony = () => {
                   gap: "20px",
                 }}
               >
-                <BsFillArrowLeftSquareFill
+                <MdArrowBackIos
                   color={Colors.orange}
                   size="1.5rem"
                   onClick={() => {
@@ -326,7 +328,7 @@ const Testimony = () => {
                     <TestimonyPerson src={Testimony6}></TestimonyPerson>
                   </div>
                 )}
-                <BsFillArrowRightSquareFill
+                <MdArrowForwardIos
                   color={Colors.orange}
                   size="1.5rem"
                   onClick={() => {
@@ -553,16 +555,17 @@ const Header = styled.div`
 
 const Page = styled.div`
   background: ${Colors.blue};
-  height: 650px;
+  // height: 650px;
+  padding: 30px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  @media screen and (max-width: 1300px) {
-    height: 800px;
-  }
+  // @media screen and (max-width: 1300px) {
+  //   height: 800px;
+  // }
 
-  @media screen and (max-width: 775px) {
-    height: 650px;
-  }
+  // @media screen and (max-width: 775px) {
+  //   height: 650px;
+  // }
 `;
