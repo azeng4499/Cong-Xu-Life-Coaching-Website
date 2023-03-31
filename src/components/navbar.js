@@ -108,7 +108,7 @@ const Navbar = () => {
             </NavLinks>
           </li>
         </NavMenu>
-        <Button onClick={() => openInNewTab("http://localhost:3000/book-now")}>
+        <Button onClick={() => openInNewTab("https://cxucoaching.com/book-now")}>
           <ButtonText> {Translate("Book Now")}</ButtonText>
         </Button>
         {/* <PopupModal

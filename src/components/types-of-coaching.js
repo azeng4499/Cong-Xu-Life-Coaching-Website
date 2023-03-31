@@ -7,7 +7,6 @@ import Workshop from "../images/business-final.svg";
 import Group from "../images/group.svg";
 import OneOnOne from "../images/relationship-final.svg";
 import { Colors } from "../utils/colors";
-import "react-tippy/dist/tippy.css";
 import "./types-of-coaching.css";
 import { Translate } from "../utils/translate";
 
@@ -250,9 +249,7 @@ const TypesOfCoaching = () => {
             className="next-step"
           >
             <Header>Ready to take the next step?</Header>
-            <Button
-              onClick={() => openInNewTab("http://localhost:3000/book-now")}
-            >
+            <Button onClick={() => openInNewTab("https://cxucoaching.com/book-now")}>
               <ButtonText> {Translate("Book Now")}</ButtonText>
             </Button>
           </div>
