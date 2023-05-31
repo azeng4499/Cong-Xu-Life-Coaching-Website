@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import "./about-coaching.css";
 import { Colors } from "../utils/colors";
+import { BsPlayCircleFill } from "react-icons/bs";
+
 const AboutCoaching = () => {
   return (
     <div>
@@ -35,7 +37,10 @@ const AboutCoaching = () => {
           </TitleWrapper>
           <CoachingWrapper>
             <div className="card">
-              <QuestionText>What is coaching?</QuestionText>
+              <QuestionText>
+                What is coaching?
+                <BsPlayCircleFill />
+              </QuestionText>
               <AnswerText>
                 Coaching is about connecting to your human energy. About
                 identifying and closing the gap between where you are right now
@@ -45,7 +50,10 @@ const AboutCoaching = () => {
               </AnswerText>
             </div>
             <div className="card">
-              <QuestionText>Coach vs Therapist</QuestionText>
+              <QuestionText>
+                Coach vs Therapist
+                <BsPlayCircleFill />
+              </QuestionText>
               <Table>
                 <tr>
                   <th style={{ border: "solid", padding: "1px 10px" }}>
@@ -78,7 +86,10 @@ const AboutCoaching = () => {
               </Table>
             </div>
             <div className="card">
-              <QuestionText>Coach vs Consultant</QuestionText>
+              <QuestionText>
+                Coach vs Consultant
+                <BsPlayCircleFill />
+              </QuestionText>
               <Table>
                 <tr>
                   <th style={{ border: "solid", padding: "1px 10px" }}>
@@ -113,7 +124,10 @@ const AboutCoaching = () => {
               </Table>
             </div>
             <div className="card">
-              <QuestionText>What will coaching bring?</QuestionText>
+              <QuestionText>
+                What will coaching bring?
+                <BsPlayCircleFill />
+              </QuestionText>
               <UnorderedList>
                 <li>Builds new awareness</li>
                 <li>Lets you reflect on experiences, not just have them</li>
@@ -213,7 +227,11 @@ const CoachingWrapper = styled.div`
 const QuestionText = styled.div`
   color: ${Colors.orange};
   font-family: "Kdam Thmor Pro", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 const AnswerText = styled.div`

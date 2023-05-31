@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styled, { keyframes } from "styled-components";
-import Bg from "../images/congxuwebsitebackground.png";
+import Bg from "../images/congxuwebsitebackground1.png";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { Colors } from "../utils/colors";
@@ -41,7 +41,9 @@ const Hero = () => {
             <SvgPath d="M690 736C574.641 690.128 501.634 666.141 515 593.5C565.452 434.223 604.344 389.049 655.263 369.815C672.446 363.325 690.999 359.789 711.828 355.819L713.5 355.5C821.647 345.487 784.421 363.538 659.027 478.829L660 507L664.991 545.095L690 736Z M279.5 80.5L131 216.5C204.866 235.871 229.003 252.889 247.5 292C174.552 374.368 118.781 415.264 14.5 486.5L97.5 449.5L220 694.5C402.417 235.545 481.254 116.155 601 26C638.241 24.7953 647.123 56.9459 647.5 145L660 507L690 736C574.641 690.128 501.634 666.141 515 593.5C582.932 379.039 629.907 371.442 713.5 355.5C836.748 344.089 771.191 369.126 601.5 533C568.644 564.892 684.56 539.773 772.5 533M1107 131.5L1244.5 96L1167.04 329M1120.5 469L1167.04 329M1167.04 329L1213.5 355.5L1244.5 766.5M1406.5 145L1440 183M1582 96L1440 309.5L1582 273.5L1440 454.34M1353.5 564.5L1440 454.34M1440 454.34C1520.92 612.995 1602.46 623.601 1770.5 593.5L1722 486.5M1611 454.34L1770.5 402.5L1844 449.5" />
           </SignatureSvg>
           <SideBtnWrap>
-            <Button onClick={() => openInNewTab("https://cxucoaching.com/booknow")}>
+            <Button
+              onClick={() => openInNewTab("https://cxucoaching.com/booknow")}
+            >
               <ButtonText>Book Now</ButtonText>
             </Button>
           </SideBtnWrap>

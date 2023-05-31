@@ -249,7 +249,9 @@ const TypesOfCoaching = () => {
             className="next-step"
           >
             <Header>Ready to take the next step?</Header>
-            <Button onClick={() => openInNewTab("https://cxucoaching.com/book-now")}>
+            <Button
+              onClick={() => openInNewTab("https://cxucoaching.com/book-now")}
+            >
               <ButtonText> {Translate("Book Now")}</ButtonText>
             </Button>
           </div>

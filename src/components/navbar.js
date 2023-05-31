@@ -107,8 +107,22 @@ const Navbar = () => {
               {Translate("Testimonies")}
             </NavLinks>
           </li>
+          <li>
+            <NavLinks
+              to="news"
+              duration={500}
+              spy={true}
+              offset={-150}
+              exact="true"
+              smooth={true}
+            >
+              {Translate("News")}
+            </NavLinks>
+          </li>
         </NavMenu>
-        <Button onClick={() => openInNewTab("https://cxucoaching.com/book-now")}>
+        <Button
+          onClick={() => openInNewTab("https://cxucoaching.com/book-now")}
+        >
           <ButtonText> {Translate("Book Now")}</ButtonText>
         </Button>
         {/* <PopupModal

@@ -9,6 +9,8 @@ import Footer from "./components/footer";
 import Sidebar from "./components/sidebar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import BookNow from "./components/book-now";
+import EmailAgg from "./components/email-agg";
+import News from "./components/news";
 import "./App.css";
 
 function App() {
@@ -23,10 +25,12 @@ function App() {
                 <Navbar />
                 <Sidebar />
                 <Hero />
+                <EmailAgg />
                 <AboutMe />
                 <AboutCoaching />
                 <TypesOfCoaching />
                 <Testimony />
+                <News />
                 <Footer />
               </>
             }

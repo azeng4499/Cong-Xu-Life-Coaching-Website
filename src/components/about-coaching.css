@@ -52,3 +52,7 @@
     min-width: 310px;
   }
 }
+
+.card::-webkit-scrollbar {
+  display: none;
+}
