@@ -6,6 +6,8 @@ import Corporate from "../images/career-final.svg";
 import Workshop from "../images/business-final.svg";
 import Group from "../images/group.svg";
 import OneOnOne from "../images/relationship-final.svg";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
 import { Colors } from "../utils/colors";
 import "./types-of-coaching.css";
 import { Translate } from "../utils/translate";
@@ -34,37 +36,33 @@ const TypesOfCoaching = () => {
       </svg>
       <Page className="types-of-coaching">
         <PageWrapper>
-          <HeaderWrapper data-aos="fade-up" data-aos-once="true">
+          <HeaderWrapper>
             <div>
               <Header>Types of Coaching</Header>
               <Title>How I Can Help</Title>
             </div>
           </HeaderWrapper>
-          <BlobWrapper>
-            <div className="flip-card">
-              <div className="flip-card-inner">
-                <div
-                  className="flip-card-front"
-                  style={{ backgroundColor: Colors.darkBlue }}
-                >
-                  <img
-                    src={OneOnOne}
-                    alt="Avatar"
-                    style={{ width: "200px", height: "200px" }}
-                  />
-                  <Label
+          <Content>
+            <Tabs>
+              <TabList
+                style={{
+                  backgroundColor: Colors.tan,
+                  fontFamily: '"Kdam Thmor Pro", sans-serif',
+                }}
+              >
+                <Tab>1 on 1</Tab>
+                <Tab>Group</Tab>
+                <Tab>Corporate</Tab>
+                <Tab>Workshop</Tab>
+              </TabList>
+
+              <TabPanel>
+                <TabPanelDiv>
+                  <div
                     style={{
-                      padding: "10px 20px",
+                      width: "fit-content",
                     }}
                   >
-                    1 on 1
-                  </Label>
-                </div>
-                <div
-                  className="flip-card-back"
-                  style={{ backgroundColor: Colors.darkBlue }}
-                >
-                  <div className="no-scrollbar" style={{ overflow: "scroll" }}>
                     <p>Are you done with all the drama? </p>
                     <p>Are you dissatisfied with your work-life balance? </p>
                     <p>Are you tired of having dreams but no actions? </p>
@@ -83,36 +81,27 @@ const TypesOfCoaching = () => {
                       <li>Find clarity, direction, and motivation</li>
                       <li>Build more confidence and self-esteem</li>
                       <li>Improve communication and relationships</li>
-                      <li>Create a plan for taking action.</li>
+                      <li>Create a plan for taking action</li>
                     </ul>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div className="flip-card">
-              <div className="flip-card-inner">
-                <div
-                  className="flip-card-front"
-                  style={{ backgroundColor: Colors.darkBlue }}
-                >
-                  <img
-                    src={Group}
-                    alt="Avatar"
-                    style={{ width: "200px", height: "200px" }}
+                  <iframe
+                    src={`https://www.youtube.com/embed/nFx6yKZrzco`}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    title="Embedded youtube"
+                    className="video-frame"
                   />
-                  <Label
+                </TabPanelDiv>
+              </TabPanel>
+              <TabPanel>
+                <TabPanelDiv>
+                  <div
                     style={{
-                      padding: "10px 20px",
+                      width: "fit-content",
+                      maxWidth: "500px",
                     }}
                   >
-                    Group
-                  </Label>
-                </div>
-                <div
-                  className="flip-card-back"
-                  style={{ backgroundColor: Colors.darkBlue }}
-                >
-                  <div className="no-scrollbar" style={{ overflow: "scroll" }}>
                     <p>
                       For those who have always wanted to create the life of
                       their dreams but feel like there's never enough time or
@@ -151,33 +140,24 @@ const TypesOfCoaching = () => {
                       supported by accountability partners.
                     </p>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div className="flip-card">
-              <div className="flip-card-inner">
-                <div
-                  className="flip-card-front"
-                  style={{ backgroundColor: Colors.darkBlue }}
-                >
-                  <img
-                    src={Corporate}
-                    alt="Avatar"
-                    style={{ width: "200px", height: "200px" }}
+                  <iframe
+                    src={`https://www.youtube.com/embed/nFx6yKZrzco`}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    title="Embedded youtube"
+                    className="video-frame"
                   />
-                  <Label
+                </TabPanelDiv>
+              </TabPanel>
+              <TabPanel>
+                <TabPanelDiv>
+                  <div
                     style={{
-                      padding: "10px 20px",
+                      width: "fit-content",
+                      maxWidth: "500px",
                     }}
                   >
-                    Corporate
-                  </Label>
-                </div>
-                <div
-                  className="flip-card-back"
-                  style={{ backgroundColor: Colors.darkBlue }}
-                >
-                  <div className="no-scrollbar" style={{ overflow: "scroll" }}>
                     <p>
                       “Leadership is not about titles, positions, or flowcharts.
                       It is about one life influencing another.” - John C.
@@ -200,44 +180,45 @@ const TypesOfCoaching = () => {
                       which will help you accomplish reaching new goals.
                     </p>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div className="flip-card">
-              <div className="flip-card-inner">
-                <div
-                  className="flip-card-front"
-                  style={{ backgroundColor: Colors.darkBlue }}
-                >
-                  <img
-                    src={Workshop}
-                    alt="Avatar"
-                    style={{ width: "200px", height: "200px" }}
+                  <iframe
+                    src={`https://www.youtube.com/embed/nFx6yKZrzco`}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    title="Embedded youtube"
+                    className="video-frame"
                   />
-                  <Label
+                </TabPanelDiv>
+              </TabPanel>
+              <TabPanel>
+                <TabPanelDiv>
+                  <div
                     style={{
-                      padding: "10px 20px",
+                      width: "fit-content",
+                      maxWidth: "500px",
                     }}
                   >
-                    Workshop
-                  </Label>
-                </div>
-                <div
-                  className="flip-card-back"
-                  style={{ backgroundColor: Colors.darkBlue }}
-                >
-                  <p>
-                    Our workshops are designed for organizations and
-                    corporations that are looking for personal development,
-                    leadership training, and a shared understanding and
-                    alignment around common goals. We understand the importance
-                    of fostering collaboration and positive communication among
-                    team members.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </BlobWrapper>
+                    <p>
+                      Our workshops are designed for organizations and
+                      corporations that are looking for personal development,
+                      leadership training, and a shared understanding and
+                      alignment around common goals. We understand the
+                      importance of fostering collaboration and positive
+                      communication among team members.
+                    </p>
+                  </div>
+                  <iframe
+                    src={`https://www.youtube.com/embed/nFx6yKZrzco`}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    title="Embedded youtube"
+                    className="video-frame"
+                  />
+                </TabPanelDiv>
+              </TabPanel>
+            </Tabs>
+          </Content>
           <div
             style={{
               display: "flex",
@@ -263,13 +244,7 @@ const TypesOfCoaching = () => {
 
 export default TypesOfCoaching;
 
-const PageWrapper = styled.div`
-  margin-bottom: 100px;
-
-  @media screen and (max-width: 1300px) {
-    margin-bottom: 60px;
-  }
-`;
+const PageWrapper = styled.div``;
 
 const HeaderWrapper = styled.div`
   display: flex;
@@ -277,59 +252,6 @@ const HeaderWrapper = styled.div`
   @media screen and (max-width: 775px) {
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-  }
-`;
-
-const BlobContainer = styled.div`
-  height: 350px;
-  width: 250px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: ${Colors.darkBlue};
-  border-radius: 15px;
-`;
-
-const BlobImage = styled.img`
-  height: 200px;
-  width: 200px;
-`;
-
-const Content = styled.div`
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
-
-const Label = styled.div`
-  font-family: "Kdam Thmor Pro", sans-serif;
-  font-size: 2.2rem;
-  color: ${Colors.white};
-  width: fit-content;
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
-`;
-
-const BlobWrapper = styled.div`
-  display: grid;
-  margin: auto;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  align-items: center;
-  justify-content: center;
-  grid-gap: 50px;
-
-  @media screen and (max-width: 1300px) {
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-  }
-
-  @media screen and (max-width: 775px) {
-    grid-template-columns: 1fr;
-    display: flex;
     flex-direction: column;
   }
 `;
@@ -346,7 +268,7 @@ const Title = styled.div`
   color: ${Colors.orange};
   font-family: "Bebas Neue", cursive;
   font-size: 4rem;
-  margin: 0px 0px 75px 0px;
+  margin: 0px 0px 50px 0px;
   display: flex;
   align-items: center;
   border-bottom: solid;
@@ -362,21 +284,14 @@ const Title = styled.div`
 `;
 
 const Page = styled.div`
-  // height: 650px;
   background: ${Colors.tan};
   display: flex;
+  height: fit-content;
+  min-height: max-content;
+  padding: 20px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-
-  // @media screen and (max-width: 1300px) {
-  //   height: 1125px;
-  // }
-
-  // @media screen and (max-width: 775px) {
-  //   height: 1850px;
-  // }
 `;
 
 export const Button = styled.button`
@@ -399,4 +314,34 @@ export const ButtonText = styled.div`
   font-size: 1.2rem;
   font-family: "Kdam Thmor Pro", sans-serif;
   color: ${Colors.white};
+`;
+
+const TabPanelDiv = styled.div`
+  padding 15px;
+  font-size: 1rem;
+  font-family: "Kdam Thmor Pro", sans-serif;
+  display: flex;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  justify-content: space-between;
+  background-color: #fff;
+  color: black;
+  border-radius: 0px 0px 10px 10px;
+
+  @media screen and (max-width: 750px) {
+      flex-direction: column;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+  }
+`;
+
+const Content = styled.div`
+  width: 1000px;
+  background-color: #fff;
+  // border: solid 2px black;
+  @media screen and (max-width: 1000px) {
+    width: calc(100vw - 20px);
+  }
 `;

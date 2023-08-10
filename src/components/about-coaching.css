@@ -1,5 +1,5 @@
 .card {
-  height: 350px;
+  height: 400px;
   width: 500px;
   background: #fbf1db;
   justify-content: flex-start;
@@ -11,6 +11,7 @@
   box-shadow: -1rem 0 3rem;
   gap: 20px;
   overflow: scroll;
+  font-size: 1rem;
 }
 
 @media screen and (min-width: 1300px) {

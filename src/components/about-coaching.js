@@ -1,12 +1,69 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import "./about-coaching.css";
 import { Colors } from "../utils/colors";
 import { BsPlayCircleFill } from "react-icons/bs";
+import Modal from "react-modal";
+import { FaWindowClose } from "react-icons/fa";
 
 const AboutCoaching = () => {
+  const customStyles = {
+    content: {
+      width: "100vw",
+      height: "fit-content",
+      maxWidth: "500px",
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      transform: "translate(-50%, -50%)",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      zIndex: "999",
+      position: "absolute",
+      flexDirection: "column",
+    },
+  };
+
+  const [modalOpen, setModalOpen] = useState(false);
+  const [mode, setMode] = useState("wis");
+
   return (
     <div>
+      <Modal
+        isOpen={modalOpen}
+        contentLabel="Example Modal"
+        style={customStyles}
+      >
+        <div
+          style={{
+            width: "100%",
+            height: "50px",
+            display: "flex",
+            justifyContent: "flex-end",
+          }}
+        >
+          <FaWindowClose
+            size={20}
+            onClick={() => {
+              setModalOpen(false);
+            }}
+          />
+        </div>
+        <iframe
+          src={`https://www.youtube.com/embed/nFx6yKZrzco`}
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          title="Embedded youtube"
+          style={{
+            width: "100%",
+            height: "258px",
+            maxWidth: "500px",
+          }}
+        />
+      </Modal>
       <svg
         height="80px"
         width="100%"
@@ -18,11 +75,7 @@ const AboutCoaching = () => {
         <path d="M0 0 L100 0 L100 100 Z" />
       </svg>
       <Page>
-        <PageWrapper
-          data-aos="fade-up"
-          data-aos-once="true"
-          className="what-is-coaching"
-        >
+        <PageWrapper>
           <TitleWrapper>
             <div
               style={{
@@ -39,7 +92,13 @@ const AboutCoaching = () => {
             <div className="card">
               <QuestionText>
                 What is coaching?
-                <BsPlayCircleFill />
+                <BsPlayCircleFill
+                  size={30}
+                  onClick={() => {
+                    setModalOpen(true);
+                    setMode("wis");
+                  }}
+                />
               </QuestionText>
               <AnswerText>
                 Coaching is about connecting to your human energy. About
@@ -52,7 +111,13 @@ const AboutCoaching = () => {
             <div className="card">
               <QuestionText>
                 Coach vs Therapist
-                <BsPlayCircleFill />
+                <BsPlayCircleFill
+                  size={30}
+                  onClick={() => {
+                    setModalOpen(true);
+                    setMode("cvt");
+                  }}
+                />
               </QuestionText>
               <Table>
                 <tr>
@@ -88,7 +153,13 @@ const AboutCoaching = () => {
             <div className="card">
               <QuestionText>
                 Coach vs Consultant
-                <BsPlayCircleFill />
+                <BsPlayCircleFill
+                  size={30}
+                  onClick={() => {
+                    setModalOpen(true);
+                    setMode("cvc");
+                  }}
+                />
               </QuestionText>
               <Table>
                 <tr>
@@ -125,8 +196,17 @@ const AboutCoaching = () => {
             </div>
             <div className="card">
               <QuestionText>
-                What will coaching bring?
-                <BsPlayCircleFill />
+                <div style={{ maxWidth: "200px" }}>
+                  What will coaching bring?
+                </div>
+                <BsPlayCircleFill
+                  style={{ alignSelf: "self-start" }}
+                  size={30}
+                  onClick={() => {
+                    setModalOpen(true);
+                    setMode("wwcb");
+                  }}
+                />
               </QuestionText>
               <UnorderedList>
                 <li>Builds new awareness</li>
@@ -237,7 +317,7 @@ const QuestionText = styled.div`
 const AnswerText = styled.div`
   color: ${Colors.darkBlue};
   font-family: "Kdam Thmor Pro", sans-serif;
-  font-size: 1rem;
+  font-size: 0.8rem;
 `;
 
 const Table = styled.table`

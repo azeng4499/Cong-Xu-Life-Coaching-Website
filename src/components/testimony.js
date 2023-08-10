@@ -132,16 +132,12 @@ const Testimony = () => {
       </svg>
       <Page>
         <TestimonyWrapper>
-          <TitleWrapper
-            data-aos="fade-up"
-            data-aos-once="true"
-            className="testimony"
-          >
+          <TitleWrapper>
             <Header>Testimonies</Header>
             <Title>What People Are Saying</Title>
           </TitleWrapper>
           <TestimonyContainerPlaceHolder>
-            <TestimonyContainer data-aos="fade-up" data-aos-once="true">
+            <TestimonyContainer>
               <TestimonyDiv
                 style={{
                   display: "flex",
@@ -500,28 +496,6 @@ const TestimonyContainer = styled.div`
   // }
 `;
 
-// const TestimonyToolbar = styled.div`
-//   margin-top: 30px;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// `;
-
-// const TestimonyPersonContainer = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-//   margin: 0px 50px;
-
-//   @media screen and (max-width: 775px) {
-//     margin: 0px 20px;
-//   }
-//   @media screen and (max-width: 375px) {
-//     margin: 0px 5px;
-//   }
-// `;
-
 const TestimonyPerson = styled.img`
   height: 50px;
   width: 50px;
@@ -535,18 +509,6 @@ const TestimonyPerson = styled.img`
   // }
 `;
 
-// const TestimonyPersonLabel = styled.div`
-//   font-family: "Kdam Thmor Pro", sans-serif;
-//   font-size: 1rem;
-//   margin-top: 10px;
-//   text-align: center;
-//   color: ${Colors.white}}
-
-//   @media screen and (max-width: 550px) {
-//     font-size: 0.8rem;
-//   }
-// `;
-
 const Header = styled.div`
   color: ${Colors.white};
   font-family: "Kdam Thmor Pro", sans-serif;
@@ -555,17 +517,8 @@ const Header = styled.div`
 
 const Page = styled.div`
   background: ${Colors.blue};
-  // height: 650px;
-  padding: 30px 0px;
+  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  // @media screen and (max-width: 1300px) {
-  //   height: 800px;
-  // }
-
-  // @media screen and (max-width: 775px) {
-  //   height: 650px;
-  // }
 `;

@@ -148,7 +148,7 @@ const Nav = styled.nav`
   position: sticky;
   display: grid;
   top: 0;
-  z-index 10;
+  z-index: 10;
 `;
 
 const NavContainer = styled.div`

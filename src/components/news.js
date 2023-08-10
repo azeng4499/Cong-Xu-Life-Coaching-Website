@@ -9,10 +9,6 @@ const urlArr = [
   "https://www.linkedin.com/embed/feed/update/urn:li:share:7057810024986746880",
   "https://www.linkedin.com/embed/feed/update/urn:li:share:7057810024986746880",
   "https://www.linkedin.com/embed/feed/update/urn:li:share:7057810024986746880",
-  "https://www.linkedin.com/embed/feed/update/urn:li:share:7057810024986746880",
-  "https://www.linkedin.com/embed/feed/update/urn:li:share:7057810024986746880",
-  "https://www.linkedin.com/embed/feed/update/urn:li:share:7057810024986746880",
-  "https://www.linkedin.com/embed/feed/update/urn:li:share:7057810024986746880",
 ];
 
 const News = () => {
@@ -30,13 +26,13 @@ const News = () => {
       </svg>
       <Page className="news">
         <PageWrapper>
-          <HeaderWrapper data-aos="fade-up" data-aos-once="true">
+          <HeaderWrapper>
             <div>
               <Header>News</Header>
               <Title>{"Recent Posts"}</Title>
             </div>
           </HeaderWrapper>
-          <div
+          {/* <div
             style={{
               width: "100vw",
               height: "320px",
@@ -44,22 +40,22 @@ const News = () => {
               justifyContent: "center",
               alignItems: "center",
             }}
-          >
-            <Container className="container">
-              {urlArr.map((url) => {
-                return (
-                  <div className="contain">
-                    <LinkedInEmbed
-                      url={url}
-                      width={300}
-                      height={300}
-                      className="embed"
-                    />
-                  </div>
-                );
-              })}
-            </Container>
-          </div>
+          > */}
+          <Container className="container">
+            {urlArr.map((url) => {
+              return (
+                <div>
+                  <LinkedInEmbed
+                    url={url}
+                    width={275}
+                    height={300}
+                    className="embed"
+                  />
+                </div>
+              );
+            })}
+          </Container>
+          {/* </div> */}
         </PageWrapper>
       </Page>
     </>
@@ -68,42 +64,34 @@ const News = () => {
 
 const Container = styled.div`
   display: flex;
-  justify-content: center;
-  padding: 10px 10px;
-  overflow-x: scroll;
+  justify-content: space-evenly;
   width: 1200px;
   height: 320px;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  background-color: ${Colors.tan};
-  border-right: solid;
-  border-right-width: 10px;
-  border-right-color: ${Colors.orange};
 
   @media screen and (max-width: 1300px) {
-    width: 800px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    width: 650px;
+    height: 650px;
   }
 
-  @media screen and (max-width: 850px) {
-    width: 600px;
-  }
-
-  @media screen and (max-width: 650px) {
-    width: 400px;
-  }
-
-  @media screen and (max-width: 450px) {
-    width: 300px;
+  @media screen and (max-width: 775px) {
+    grid-template-columns: 1fr;
+    width: 100vw;
+    height: 1300px;
   }
 `;
 
 const PageWrapper = styled.div`
-  margin-bottom: 50px;
+  // margin-bottom: 50px;
 
-  @media screen and (max-width: 1300px) {
-    margin-bottom: 20px;
-  }
+  // @media screen and (max-width: 1300px) {
+  //   margin-bottom: 20px;
+  // }
 `;
 
 const HeaderWrapper = styled.div`
@@ -121,7 +109,6 @@ const Header = styled.div`
   color: ${Colors.darkBlue};
   font-family: "Kdam Thmor Pro", sans-serif;
   font-size: 1.2rem;
-  margin-top: 40px;
 `;
 
 const Title = styled.div`
@@ -146,21 +133,13 @@ const Title = styled.div`
 `;
 
 const Page = styled.div`
-  // height: 650px;
   background: ${Colors.tan};
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-
-  // @media screen and (max-width: 1300px) {
-  //   height: 1125px;
-  // }
-
-  // @media screen and (max-width: 775px) {
-  //   height: 1850px;
-  // }
+  padding: 20px;
 `;
 
 export default News;
