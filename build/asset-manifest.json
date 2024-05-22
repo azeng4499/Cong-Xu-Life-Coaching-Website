@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.236b0096.css",
+    "main.js": "/static/js/main.8ad47f3c.js",
+    "static/media/portrait.jpg": "/static/media/portrait.d2ea30ba74e2cbd6f611.jpg",
+    "static/media/happy-friends.jpg": "/static/media/happy-friends.7081f0f3e73242fce690.jpg",
+    "static/media/Leigh.png": "/static/media/Leigh.9009f80eaae7be81fd95.png",
+    "static/media/qingdao.jpg": "/static/media/qingdao.e2d1487b3d941b3e9c49.jpg",
+    "static/media/Anna.jpg": "/static/media/Anna.65a72960d19e77ba0082.jpg",
+    "static/media/cong-hero-3.png": "/static/media/cong-hero-3.c645e4784812bd42d6ea.png",
+    "static/media/xiaoli.jpeg": "/static/media/xiaoli.5b327606c44ffd3b8b21.jpeg",
+    "static/media/Cat.png": "/static/media/Cat.2b5cb73297fefa3b7b49.png",
+    "static/media/frank.jpeg": "/static/media/frank.cd36d6d56268c4397ff3.jpeg",
+    "static/media/Babaraba.jpeg": "/static/media/Babaraba.bd9e462822405e01f276.jpeg",
+    "static/media/cxclogo.png": "/static/media/cxclogo.00147839930d4c8a285d.png",
+    "index.html": "/index.html",
+    "main.236b0096.css.map": "/static/css/main.236b0096.css.map",
+    "main.8ad47f3c.js.map": "/static/js/main.8ad47f3c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.236b0096.css",
+    "static/js/main.8ad47f3c.js"
+  ]
+}
